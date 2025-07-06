@@ -17,7 +17,7 @@ export default function Home() {
           </h1>
 
           <p className="font-medium text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-6 opacity-0 animate-fade-in delay-200">
-            Software engineer, UX designer, and part time shitposter.
+            UX Designer, Software Engineer, and part time shitposter.
           </p>
 
           <div className="flex justify-center gap-6 mb-8 opacity-0 animate-fade-in delay-400">
@@ -35,12 +35,12 @@ export default function Home() {
           <div className="max-w-xl mx-auto text-gray-600/75 dark:text-gray-300/75 opacity-0 animate-fade-in delay-600">
             I love to build, break, and fix things.
             Currently helping founders launch fast with <a className="underline decoration-gray-600/50 dark:decoration-gray-300/50" href="https://airwork.ai">Airwork</a>.
-            Working with startups for half a decade (5 yrs sounds less dramatic).
+            Working with startups for half a decade (cause almost 5 yrs sounds less dramatic).
             <br /> <br />
             <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMore ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
               <span>This website is just a placeholder for this GitHub account.
-                Checkout my full website <a className="underline decoration-gray-600/50 dark:decoration-gray-300/50" href="https://shamemezahid.github.io">here</a>.
-                Feel free to reach out on <a className="underline decoration-gray-600/50 dark:decoration-gray-300/50" href="https://linkedin.com/in/shamemezahid">LinkedIn</a>. I love talking about products, business, design, economics, comicbooks, music, movies and puns.</span>
+                Checkout my <a className="underline decoration-gray-600/50 dark:decoration-gray-300/50" href="https://shamemezahid.github.io">full website here</a>.
+                Feel free to reach out on <a className="underline decoration-gray-600/50 dark:decoration-gray-300/50" href="https://linkedin.com/in/shamemezahid">LinkedIn</a>. I love talking about design, computers, products, business, economics, comicbooks, art, music, movies, and puns.</span>
             </div>
             <button 
               onClick={handleToggle}
@@ -53,7 +53,7 @@ export default function Home() {
       </main>
 
       <footer className="py-4 text-center text-xs text-gray-500 dark:text-gray-400 opacity-0 animate-fade-in delay-600">
-        © {new Date().getFullYear()} • Built (in a hurry but) with ❤️ by Shamim
+        © {new Date().getFullYear()} • Built (in a hurry, but) with ❤️ by Shamim
       </footer>
     </div>
   );

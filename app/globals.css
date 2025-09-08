@@ -31,3 +31,146 @@
   font-family: "Red Hat Display", sans-serif;
 }
 
+/* Slowly rotating gradient background overlay (simple, reusable) */
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+/* Attach this class to any container to enable the rotating gradient */
+.rotating-gradient {
+  position: relative;
+  overflow: hidden; /* ensure the fixed layer doesn't cause scrollbars in some browsers */
+}
+
+/* Only show the animated layer in dark mode to keep light theme clean */
+@media (prefers-color-scheme: dark) {
+  .rotating-gradient::before {
+    content: "";
+    position: fixed; /* fixed so it stays put on scroll and fills the viewport */
+    inset: -30vmax; /* oversized to avoid clipping while rotating */
+    z-index: 0;
+    pointer-events: none;
+    /* Base subtle conic gradient with dark teal accents */
+    background: conic-gradient(
+      from 0deg at 50% 50%,
+      rgba(4, 47, 46, 0.25) 0deg,
+      rgba(0, 0, 0, 0.0) 60deg,
+      rgba(4, 47, 46, 0.18) 120deg,
+      rgba(0, 0, 0, 0.0) 180deg,
+      rgba(4, 47, 46, 0.22) 240deg,
+      rgba(0, 0, 0, 0.0) 300deg,
+      rgba(4, 47, 46, 0.25) 360deg
+    );
+    filter: blur(80px);
+    opacity: 0.45; /* subtle by default; adjust to taste */
+    animation: spin-slow 48s linear infinite;
+    transform-origin: 50% 50%;
+  }
+
+  /* Ensure content sits above the background overlay without affecting fixed elements */
+  .rotating-gradient > :not(.fixed) {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* Safe-area aware right offset for floating UI (like YT Shorts) */
+.right-safe {
+  right: calc(env(safe-area-inset-right, 0px) + 16px);
+}
+
+@media (min-width: 640px) {
+  .right-safe { right: calc(env(safe-area-inset-right, 0px) + 24px); }
+}
+
+@media (min-width: 1024px) {
+  .right-safe { right: calc(env(safe-area-inset-right, 0px) + 32px); }
+}
+
+/* Floating nav buttons: subtle, semi-opaque, with bouncy hover */
+@keyframes pop-bounce {
+  0% { transform: scale(1); }
+  60% { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+
+.btn-floating {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.8);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: background-color 200ms ease, color 200ms ease, transform 150ms ease;
+}
+
+.btn-floating:hover {
+  background: rgba(255,255,255,0.18);
+  color: rgba(255,255,255,1);
+  animation: pop-bounce 300ms cubic-bezier(.34,1.56,.64,1);
+}
+
+.btn-floating svg { width: 1.1rem; height: 1.1rem; }
+
+/* Bounce-in for the arriving section content */
+@keyframes bounceInUp {
+  0%   { opacity: 0; transform: translateY(30px); }
+  60%  { opacity: 1; transform: translateY(-6px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-bounce-in {
+  animation: bounceInUp 650ms cubic-bezier(.22,.68,0,1.02);
+}
+
+/* Section indicator dots */
+.indicator-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: rgba(255,255,255,0.5);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.15) inset;
+  transform: scale(1);
+  transition: opacity 220ms ease, transform 220ms cubic-bezier(.22,.68,0,1.02), background-color 220ms ease;
+}
+
+/* Indicator container transitions */
+.indicators-container {
+  transition: max-height 400ms ease, opacity 400ms ease, margin 400ms ease;
+  overflow: hidden;
+  max-height: 180px; /* Enough for several dots */
+}
+
+.indicators-container.hide {
+  max-height: 0;
+  opacity: 0;
+  margin-top: -8px;
+  margin-bottom: -8px;
+  pointer-events: none;
+}
+
+/* Add transition for margins on buttons */
+.transition-margin {
+  transition: margin 400ms ease;
+}
+
+.indicator-dot--active {
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@keyframes dotBounce {
+  0% { transform: scale(0.9); }
+  50% { transform: scale(1.18); }
+  100% { transform: scale(1.1); }
+}
+
+.animate-dot-bounce {
+  animation: dotBounce 320ms cubic-bezier(.34,1.56,.64,1);
+}
+

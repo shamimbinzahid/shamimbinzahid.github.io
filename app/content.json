@@ -1,0 +1,22 @@
+{
+  "name": "Shamim Bin Zahid",
+  "subtitle": "UX Designer, Software Engineer, and part time shitposter.",
+  "links": [
+    { "label": "LinkedIn", "href": "https://linkedin.com/in/shamemezahid" },
+    { "label": "GitHub", "href": "https://github.com/shamemezahid" },
+    { "label": "Website", "href": "https://shamemezahid.github.io" }
+  ],
+  "intro": "I love to build, break, and fix things. Currently helping recruiters hire faster and better with {airwork}. Working with startups for half a decade (cause almost 5 yrs sounds less dramatic).",
+  "introLinks": {
+    "airwork": { "label": "Airwork AI", "href": "https://airwork.ai" }
+  },
+  "more": "This website is just a placeholder for this GitHub account. Checkout my {fullWebsite}. Feel free to connect and reach out on {linkedin} or follow me on {instagram}, where I post once a year, maybe. I love talking about design, products, computers, code, business, economics, philosophy, comic-books, art, music, movies, oxford commas, and puns.",
+  "moreLinks": {
+    "fullWebsite": { "label": "full website here", "href": "https://shamemezahid.github.io" },
+    "linkedin": { "label": "LinkedIn", "href": "https://linkedin.com/in/shamemezahid" },
+    "instagram": { "label": "Instagram", "href": "https://instagram.com/qwaccmaster69" }
+  },
+  "readMoreLabel": " Read more",
+  "readLessLabel": " Read less",
+  "footerNote": "Built (in a hurry, but) with ❤️ by Shamim"
+}

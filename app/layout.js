@@ -1,4 +1,4 @@
-import { Red_Hat_Display, Red_Hat_Mono, Noto_Sans_Mono } from 'next/font/google';
+import { Red_Hat_Display, Noto_Sans_Mono } from 'next/font/google';
 import "./globals.css";
 
 const displayFont = Red_Hat_Display({

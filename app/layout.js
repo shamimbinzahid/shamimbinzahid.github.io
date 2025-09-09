@@ -19,6 +19,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${monoFont.variable} ${displayFont.variable}`}>
+      <link
+          rel="icon"
+          href="shamim.ico"
+          type="image/jpeg"
+          sizes="32x32"
+        />
       <body className={`${monoFont.className}`}>
         {children}
       </body>

@@ -41,8 +41,8 @@ export default function Home() {
                 width={144}
                 height={144}
                 className="rounded-full object-cover shadow-lg"
-                aria-label="A picture of shamim"
-                title="A picture of shamim"
+                aria-label={`A picture of ${content.name}`}
+                title={`A picture of ${content.name}`}
                 priority
                 draggable={false}
               />
@@ -59,32 +59,28 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Hardcoded links section */}
+          {/* Links section - keeping structure but using content values */}
           <div className="flex justify-center gap-6 opacity-0 animate-fade-in delay-400">
-            <a href="https://linkedin.com/in/shamimbinzahid"
-              aria-label="LinkedIn"
+            <a href={content.links[0].href}
+              aria-label={content.links[0].label}
               className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
               <Linkedin size={20} strokeWidth={1.5} />
             </a>
-            <a href="https://github.com/shamemezahid"
-              aria-label="GitHub"
-              title="Github"
+            <a href={content.links[1].href}
+              aria-label={content.links[1].label}
               className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
               <Github size={20} strokeWidth={1.5} />
             </a>
-            <a href="https://instagram.com/shamemezahid"
-              aria-label="Instagram"
-              title="Instagram"
+            <a href={content.links[2].href}
+              aria-label={content.links[2].label}
               className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
               <Instagram size={20} strokeWidth={1.5} />
             </a>
-            <a href="https://shamemezahid.github.io"
-              aria-label="Website"
-              title="Website"
+            <a href={content.links[3].href}
+              aria-label={content.links[3].label}
               className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
               <Globe size={20} strokeWidth={1.5} />
             </a>
-
           </div>
 
           <div className="max-w-xl mx-auto text-gray-900/90 dark:text-gray-300/75 opacity-0 animate-fade-in delay-600 leading-relaxed font-light">
@@ -106,14 +102,16 @@ export default function Home() {
       </main>
 
       {
-        isMore && <footer className="py-8 flex flex-col items-center justify-center gap-3 text-center text-xs text-gray-500 dark:text-gray-400 opacity-0 animate-fade-in delay-600">
-          © {new Date().getFullYear()} • {content.footerNote}
-          <a href="https://docs.google.com/document/export?format=pdf&id=1DuNZqDUuYysZGSCUUP0FCWuHVcoqPjurP_Wefh22Z64"
-            aria-label="Download Resume"
-            title="Download Resume"
+        isMore && <footer className="leading-relaxed py-8 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-center text-xs text-gray-500 dark:text-gray-400 opacity-0 animate-fade-in delay-600">
+          <p>© {new Date().getFullYear()}</p> 
+          <p className="hidden sm:inline">•</p>
+          <p>{content.footerNote}</p> 
+          <p className="hidden sm:inline">•</p>
+          <a href={content.resumeUrl}
+            aria-label="Resume"
+            title="Resume"
             className="text-xs flex items-center justify-center gap-1 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
-            {/* <FileDown size={20} strokeWidth={1.5} />  */}
-            Download resume
+            Download Resume
           </a>
         </footer>
       }

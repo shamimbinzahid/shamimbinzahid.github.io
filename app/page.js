@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import content from './content.json';
-import { Linkedin, Github, Instagram, Globe, FileDown } from 'lucide-react';
+import { Linkedin, Github, Instagram, Globe, Printer } from 'lucide-react';
 
 export default function Home() {
   const [isMore, setIsMore] = useState(false);
@@ -62,24 +62,40 @@ export default function Home() {
           {/* Links section - keeping structure but using content values */}
           <div className="flex justify-center gap-6 opacity-0 animate-fade-in delay-400">
             <a href={content.links[0].href}
+              target="_blank"
               aria-label={content.links[0].label}
+              title={content.links[0].label}
               className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
               <Linkedin size={20} strokeWidth={1.5} />
             </a>
             <a href={content.links[1].href}
+              target="_blank"
               aria-label={content.links[1].label}
+              title={content.links[1].label}
               className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
               <Github size={20} strokeWidth={1.5} />
             </a>
             <a href={content.links[2].href}
+              target="_blank"
               aria-label={content.links[2].label}
+              title={content.links[2].label}
               className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
               <Instagram size={20} strokeWidth={1.5} />
             </a>
             <a href={content.links[3].href}
+              target="_blank"
               aria-label={content.links[3].label}
+              title={content.links[3].label}
               className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
               <Globe size={20} strokeWidth={1.5} />
+            </a>
+            <a
+              href="#"
+              onClick={() => { setIsMore(true); window.print(); }}
+              aria-label="Print page"
+              title="Print this page (Why not?)"
+              className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
+              <Printer size={20} strokeWidth={1.5} />
             </a>
           </div>
 

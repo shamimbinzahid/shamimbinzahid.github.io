@@ -48,12 +48,12 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex flex-col gap-3 sm:gap-4">
-              <h1 className="text-4xl sm:text-4xl font-black text-gray-900 dark:text-white opacity-0 animate-fade-in font-display">
+            <div className="flex flex-col gap-2 sm:gap-3">
+              <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white opacity-0 animate-fade-in font-display">
                 {content.name}
               </h1>
 
-              <p className="font-medium text-sm sm:text-lg text-gray-600 dark:text-gray-300 opacity-0 animate-fade-in delay-200">
+              <p className="font-medium text-base sm:text-lg text-gray-600 dark:text-gray-300 opacity-0 animate-fade-in delay-200">
                 {content.subtitle}
               </p>
             </div>
@@ -100,13 +100,12 @@ export default function Home() {
           </div>
 
           <div className="max-w-xl mx-auto text-gray-900/90 dark:text-gray-300/75 opacity-0 animate-fade-in delay-600 leading-relaxed font-light">
-            {renderTextWithLinks(content.intro, content.introLinks)}
+            <p>
+              {renderTextWithLinks(content.intro, content.introLinks)}</p>
             <br /> <br />
-            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMore ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-              <span>
-                {renderTextWithLinks(content.more, content.moreLinks)}
-              </span>
-            </div>
+            <p className={`overflow-hidden transition-all duration-300 ease-in-out ${isMore ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+              {renderTextWithLinks(content.more, content.moreLinks)}
+            </p>
             <button
               onClick={handleToggle}
               className="cursor-pointer mt-2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-300"
@@ -118,7 +117,7 @@ export default function Home() {
       </main>
 
       {
-        isMore && <footer className="leading-relaxed py-8 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-center text-xs text-gray-500 dark:text-gray-400 opacity-0 animate-fade-in delay-600">
+        isMore && <footer className="leading-relaxed py-8 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-center text-gray-500 dark:text-gray-400 opacity-0 animate-fade-in delay-600">
           <p>© {new Date().getFullYear()}</p> 
           <p className="hidden sm:inline">•</p>
           <p>{content.footerNote}</p> 
@@ -126,7 +125,7 @@ export default function Home() {
           <a href={content.resumeUrl}
             aria-label="Resume"
             title="Resume"
-            className="text-xs flex items-center justify-center gap-1 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
+            className="flex items-center justify-center gap-1 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
             Download Resume
           </a>
         </footer>

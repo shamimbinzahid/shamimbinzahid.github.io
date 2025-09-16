@@ -102,10 +102,11 @@ export default function Home() {
           <div className="max-w-xl mx-auto text-gray-900/90 dark:text-gray-300/75 opacity-0 animate-fade-in delay-600 leading-relaxed font-light">
             <p>
               {renderTextWithLinks(content.intro, content.introLinks)}</p>
-            <br /> <br />
+            <br /> 
             <p className={`overflow-hidden transition-all duration-300 ease-in-out ${isMore ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
               {renderTextWithLinks(content.more, content.moreLinks)}
             </p>
+            <br />
             <button
               onClick={handleToggle}
               className="cursor-pointer mt-2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-300"
@@ -125,8 +126,8 @@ export default function Home() {
           <a href={content.resumeUrl}
             aria-label="Resume"
             title="Resume"
-            className="flex items-center justify-center gap-1 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
-            Download Resume
+            className="underline decoration-gray-600/50 dark:decoration-gray-300/50 flex items-center justify-center gap-1 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
+            Download CV
           </a>
         </footer>
       }

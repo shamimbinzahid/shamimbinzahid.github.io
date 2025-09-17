@@ -31,10 +31,10 @@
       "icon": "Building2"
     }
   },
-  "more": "This website is just a placeholder for this GitHub account. Checkout my {fullWebsite}. Feel free to connect and reach out on {linkedin} or follow me on {instagram}, where I post once a year, maybe. I love talking about design, products, computers, code, business, economics, philosophy, comic-books, art, music, movies, oxford commas, and puns.",
+  "more": "This is more of my personal website. Checkout my good ol' {fullWebsite}. Feel free to connect and reach out on {linkedin} and follow me on {instagram}, where I post once a year, maybe. I love talking about design, products, computers, code, business, economics, philosophy, comic-books, art, music, movies, oxford commas, and puns.",
   "moreLinks": {
     "fullWebsite": { 
-      "label": "full website here", 
+      "label": "professional / resume website here", 
       "href": "https://shamemezahid.github.io",
       "icon": "ExternalLink"
     },
@@ -52,5 +52,5 @@
   "readMoreLabel": " Read more",
   "readLessLabel": " Read less",
   "footerNote": "Built (in a hurry, but) with ❤️ by Shamim",
-  "resumeUrl": "https://drive.google.com/file/u/0/d/1DuNZqDUuYysZGSCUUP0FCWuHVcoqPjurP_Wefh22Z64/view"
+  "resumeUrl": "https://drive.google.com/file/u/0/d/1DuNZqDUuYysZGSCUUP0FCWuHVcoqPjurP_Wefh22Z64/preview"
 }

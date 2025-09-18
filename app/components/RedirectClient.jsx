@@ -87,9 +87,9 @@ export function RedirectClient({ keyword, redirectUrl }) {
           </svg>
         </div>
 
-        <p className="text-xl font-medium text-gray-800 dark:text-gray-200 mb-2">
+        <p className="text-lg leading-relaxed font-medium text-gray-800 dark:text-gray-200 mb-2">
           {linkExists 
-            ? `You are being redirected to "${keyword}"`
+            ? `You are being navigated to "${keyword}"`
             : "Link broken or removed."}
         </p>
         

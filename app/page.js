@@ -126,7 +126,7 @@ export default function Home() {
             {renderTextWithLinks(content.more, content.moreLinks)}
           </p>
 
-          <p className="text-gray-900/90 dark:text-gray-300/75 leading-relaxed font-light opacity-0 animate-fade-in delay-600">{content.readMoreLabel}</p>
+          {/* <p className="text-gray-900/90 dark:text-gray-300/75 leading-relaxed font-light opacity-0 animate-fade-in delay-600">{content.readMoreLabel}</p> */}
 
           {/* Footer */}
           <div className="text-gray-900/90 dark:text-gray-300/75 flex flex-row flex-wrap gap-2 sm:gap-3 opacity-0 animate-fade-in delay-700">

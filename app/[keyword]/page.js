@@ -1,4 +1,4 @@
-import { RedirectClient } from '../components/redirect/RedirectClient';
+import { RedirectClient } from '../components/RedirectClient';
 import redirects from '../redirects.json';
 
 /**

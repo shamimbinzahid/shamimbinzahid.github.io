@@ -36,10 +36,10 @@
       "icon": "Building2"
     }
   },
-  "more": "This is more of my personal website. Checkout my good ol' {fullWebsite}. Feel free to connect and reach out on {linkedin} and follow me on {instagram}, where I post once a year, maybe. I love talking about design, products, computers, code, business, economics, philosophy, comic-books, art, music, movies, oxford commas, and puns.",
+  "more": "This is more of my personal website. Checkout my {fullWebsite} here. Feel free to connect and reach out on {linkedin} and follow me on {instagram}, where I post once a year, maybe. I love talking about design, products, computers, code, business, economics, philosophy, comic-books, art, music, movies, oxford commas, and puns.",
   "moreLinks": {
     "fullWebsite": { 
-      "label": "professional / resume website here", 
+      "label": "portfolio-ish website", 
       "href": "https://shamemezahid.github.io",
       "icon": "ExternalLink"
     },

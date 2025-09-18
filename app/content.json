@@ -18,9 +18,14 @@
       "icon": "Instagram"
     },
     { 
-      "label": "Full website", 
+      "label": "Portfolio", 
       "href": "https://shamemezahid.github.io",
       "icon": "Globe"
+    },
+    {
+      "label": "Print (why not?)",
+      "href": "#",
+      "icon": "Printer"
     }
   ],
   "intro": "I love to build, break, and fix things. Currently helping recruiters hire faster and better with {airwork}. Working with startups for half a decade (5+ yrs sounds less dramatic I guess).",

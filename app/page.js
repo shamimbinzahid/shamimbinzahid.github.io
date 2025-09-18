@@ -6,11 +6,13 @@ import { Linkedin, Github, Instagram, Globe, Printer } from 'lucide-react';
 
 export default function Home() {
   const [isMore, setIsMore] = useState(true);
+  const [showTooltip, setShowTooltip] = useState(false);
+  
   const handleToggle = () => {
     setIsMore(!isMore);
   };
 
-  const renderTextWithLinks = (text, links) => {
+  const renderTextWithLinks = (text, links) => { 
     if (!links) return text;
     return text.split(/(\{[^}]+\})/).map((part, index) => {
       if (part.startsWith('{') && part.endsWith('}')) {
@@ -29,12 +31,12 @@ export default function Home() {
   };
 
   return (
-    <div className="rotating-gradient min-h-[100dvh] bg-amber-100/15 dark:bg-gray-950 dark:bg-gradient-to-br dark:from-gray-950 dark:via-teal-950/30 dark:to-black flex flex-col">
+    <div className="rotating-gradient min-h-[100dvh] bg-amber-100/15 dark:bg-gray-950 dark:bg-gradient-to-br dark:from-gray-950 dark:via-teal-950/30 dark:to-black flex flex-col select-none">
       <main className="p-4 sm:p-6 py-6 sm:py-12 flex-grow flex flex-col items-center justify-center">
         <article className="max-w-4xl text-sm sm:text-base text-start px-4 flex flex-col gap-10 sm:gap-12">
           {/* Profile section with photo and text */}
           <section className="flex flex-col gap-4">
-            <div className="w-24 h-24 sm:w-40 sm:h-40 opacity-0 animate-fade-in">
+            <div className="w-24 h-24 sm:w-40 sm:h-40 opacity-0 animate-fade-in relative">
               <Image
                 src="/shamim.jpg"
                 alt={content.name}
@@ -45,15 +47,25 @@ export default function Home() {
                 title={`A picture of ${content.name}`}
                 priority
                 draggable={false}
+                onContextMenu={(e) => {
+                  e.preventDefault();
+                  setShowTooltip(true);
+                  setTimeout(() => {
+                    setShowTooltip(false);
+                  }, 1500);
+                }}
               />
+              <span className={`absolute top-0 left-0 transform -translate-y-full mt-2 bg-gray-900 text-white text-xs rounded py-1 px-2 transition-opacity duration-300 whitespace-nowrap dark:bg-gray-700 ${showTooltip ? 'opacity-100' : 'opacity-0'}`}>
+                Sorry, can&apos;t let you do that steve!
+              </span>
             </div>
 
             <div className="flex flex-col gap-2">
-              <h1 className="text-2xl font-extrabold text-gray-900 dark:text-white opacity-0 animate-fade-in delay-100 font-display">
+              <h1 className="text-2xl font-extrabold text-gray-900 dark:text-white opacity-0 animate-fade-in delay-100 font-display select-none">
                 {content.name}
               </h1>
 
-              <p className="font-medium text-sm sm:text-base text-gray-600 dark:text-gray-300 opacity-0 animate-fade-in delay-200">
+              <p className="font-medium text-sm sm:text-base text-gray-600 dark:text-gray-300 opacity-0 animate-fade-in delay-200 select-none">
                 {content.subtitle}
               </p>
             </div>
@@ -121,7 +133,7 @@ export default function Home() {
           </section>
         
         {
-          isMore && <footer className="leading-relaxed py-8 flex flex-row flex-wrap justify-start gap-2 sm:gap-3 text-gray-600 dark:text-gray-400 transition-colors opacity-0 animate-fade-in delay-600">
+          isMore && <footer className="leading-relaxed py-8 flex flex-row flex-wrap justify-start gap-2 sm:gap-3 text-gray-600 dark:text-gray-400 transition-colors opacity-0 animate-fade-in delay-600 select-none">
             <p>© {new Date().getFullYear()}</p>
             <p className="hidden sm:inline">•</p>
             <p>{content.footerNote}</p>

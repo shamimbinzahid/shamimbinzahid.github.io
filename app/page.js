@@ -68,7 +68,7 @@ export default function Home() {
           </div>
 
           {/* Links */}
-          <div className="flex gap-6 opacity-0 animate-fade-in delay-300">
+          <div className="flex gap-4 sm:gap-6 flex-wrap opacity-0 animate-fade-in delay-300 text-xs">
             <a
               href={content.links[0].href}
               target="_blank"

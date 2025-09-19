@@ -26,10 +26,10 @@ export default function Home() {
 
   return (
     <div className="rotating-gradient min-h-[100dvh] bg-amber-100/15 dark:bg-gray-950 dark:bg-gradient-to-br dark:from-gray-950 dark:via-teal-950/30 dark:to-black flex flex-col select-none">
-      <main className="p-4 sm:p-6 py-6 sm:py-12 flex-grow flex flex-col items-center justify-center">
-        <article className="max-w-4xl text-sm sm:text-base text-start px-4 flex flex-col gap-8">
+      <main className="px-4 sm:px-6 py-6 sm:py-12 flex-grow flex flex-col items-center justify-center">
+        <article className="max-w-4xl text-sm sm:text-base text-start p-4 flex flex-col gap-6 sm:gap-8 ">
           {/* Photo */}
-          <div className="w-24 h-24 sm:w-40 sm:h-40 opacity-0 animate-fade-in relative delay-300">
+          <div className="-mb-4 w-24 h-24 sm:w-40 sm:h-40 opacity-0 animate-fade-in relative delay-300">
             <Image
               src="/shamim.jpg"
               alt={content.name}

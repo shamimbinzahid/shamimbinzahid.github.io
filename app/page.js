@@ -1,7 +1,7 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Linkedin, Instagram, Github, Globe, Printer } from "lucide-react";
+import { Linkedin, Instagram, Github, Globe, Printer, SearchIcon } from "lucide-react";
 import content from './content.json';
 
 // Utility function for rendering text with links
@@ -159,27 +159,54 @@ const Footer = ({ footerNote, resumeUrl }) => (
   </div>
 );
 
+// Floating Search Bar Component
+const FloatingSearchBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        setIsOpen(true);
+      }
+      if (e.key === 'Escape') {
+        setIsOpen(false);
+      }
+    };
+    
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  return (
+    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+      <button
+        onClick={() => setIsOpen(true)}
+        className="group flex items-center gap-2 px-4 py-2 bg-white/5 dark:bg-gray-900/5 hover:bg-white/20 dark:hover:bg-gray-900/20 backdrop-blur rounded-full border border-gray-200/50 dark:border-gray-700/50 shadow-lg transition-all duration-200 text-gray-600 dark:text-gray-300"
+      >
+        <span className="text-xs font-medium">Search anything</span>
+        <SearchIcon strokeWidth={1.5} size={16} className="text-sky-600 dark:text-sky-700" />
+      </button>
+    </div>
+  );
+};
+
 // Main App Component
 export default function Home() {
   return (
-    <div className="rotating-gradient min-h-[100dvh] bg-amber-100/15 dark:bg-gray-950 dark:bg-gradient-to-br dark:from-gray-950 dark:via-teal-950/30 dark:to-black flex flex-col select-none">
+    <div className="relative rotating-gradient min-h-[100dvh] bg-amber-100/15 dark:bg-gray-950 dark:bg-gradient-to-br dark:from-gray-950 dark:via-teal-950/30 dark:to-black flex flex-col select-none">
       <main className="px-4 sm:px-6 py-6 sm:py-12 flex-grow flex flex-col items-center justify-center">
         <article className="max-w-4xl text-sm sm:text-base text-start p-4 flex flex-col gap-6 sm:gap-8">
-          
-          {/* Photo Component */}
           <ProfilePhoto name={content.name} />
           
-          {/* Header Component */}
           <Header name={content.name} subtitle={content.subtitle} />
           
-          {/* Social Links Component */}
           <SocialLinks links={content.links} />
           
-          {/* Paragraphs Component */}
           <ContentParagraphs paragraphs={content.paragraphs} />
           
-          {/* Footer Component */}
           <Footer footerNote={content.footerNote} resumeUrl={content.resumeUrl} />
+          
         </article>
       </main>
     </div>

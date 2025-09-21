@@ -9,14 +9,17 @@ export default function Home() {
   const [showTooltip, setShowTooltip] = useState(false);
 
   const renderTextWithLinks = (text, links) => {
-    if (!links) return text;
+    if (!links || Object.keys(links).length === 0) return text;
     return text.split(/(\{[^}]+\})/).map((part, index) => {
       if (part.startsWith('{') && part.endsWith('}')) {
         const key = part.slice(1, -1);
         const link = links[key];
         return link ? (
-          <a key={index}
+          <a 
+            key={index}
             href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
             className="underline decoration-gray-600/50 dark:decoration-gray-300/50">
             {link.label}
           </a>
@@ -32,7 +35,7 @@ export default function Home() {
         <article className="max-w-4xl text-sm sm:text-base text-start p-4 flex flex-col gap-6 sm:gap-8 ">
           
           {/* Photo */}
-          <div className="w-12 h-12 -mb-3 opacity-0 animate-fade-in relative delay-300">
+          <div className="w-12 h-12 -mb-3 opacity-0 animate-fade-in delay-300">
             <Image
               src="/shamim.jpg"
               alt={content.name}
@@ -119,20 +122,36 @@ export default function Home() {
             </a>
           </div> */}
 
-          {/* First Paragraph */}
-          <p className="text-gray-900/90 dark:text-gray-300/75 leading-relaxed light opacity-0 animate-fade-in delay-400">
-            {renderTextWithLinks(content.intro, content.introLinks)}
-          </p>
-
-          {/* Second Paragraph */}
-          <p className="text-gray-900/90 dark:text-gray-300/75 leading-relaxed light opacity-0 animate-fade-in delay-500">
-            {renderTextWithLinks(content.more, content.moreLinks)}
-          </p>
-
-          {/* <p className="text-gray-900/90 dark:text-gray-300/75 leading-relaxed light opacity-0 animate-fade-in delay-600">{content.readMoreLabel}</p> */}
-
+          {/* Paragraphs */}
+          <div className="flex flex-col gap-4 sm:gap-6">
+            {content.paragraphs.map((paragraph, index) => {
+              // Calculate delay with a more granular approach for many paragraphs
+              // First paragraphs get individual delays, later ones get grouped
+              let delay;
+              if (index < 3) {
+                // First three paragraphs get their own distinct delays
+                delay = 400 + (index * 100);
+              } else if (index < 6) {
+                // Next three paragraphs share delay-700
+                delay = 700;
+              } else {
+                // Remaining paragraphs share delay-800
+                delay = 800;
+              }
+              
+              return (
+                <p 
+                  key={index} 
+                  className={`text-gray-900/90 dark:text-gray-300/75 leading-relaxed light opacity-0 animate-fade-in delay-${delay}`}
+                >
+                  {renderTextWithLinks(paragraph.text, paragraph.links)}
+                </p>
+              );
+            })}
+          </div>
+          
           {/* Footer */}
-          <div className="text-gray-900/90 dark:text-gray-300/75 flex flex-row flex-wrap gap-2 sm:gap-3 opacity-0 animate-fade-in delay-700">
+          <div className="mt-4 sm:mt-8 text-gray-900/90 dark:text-gray-300/75 flex flex-row flex-wrap gap-2 sm:gap-3 opacity-0 animate-fade-in delay-900">
             <p>© {new Date().getFullYear()}</p>
             <p className="hidden sm:inline">•</p>
             <p>{content.footerNote}</p>
@@ -141,7 +160,7 @@ export default function Home() {
               href={content.resumeUrl}
               aria-label="Resume"
               title="Resume"
-              className="underline decoration-gray-600/50 dark:decoration-gray-300/50 transition-colors duration-200"
+              className="underline decoration-gray-600/50 dark:decoration-gray-300/50 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
             >
               Resume
             </a>

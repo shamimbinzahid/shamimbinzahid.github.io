@@ -1,13 +1,13 @@
-import { Red_Hat_Display, Noto_Sans_Mono } from 'next/font/google';
+import { Red_Hat_Display, DM_Sans } from 'next/font/google';
 import "./globals.css";
 import Script from 'next/script';
 
-const displayFont = Red_Hat_Display({
+const displayFont = DM_Sans({
   subsets: ['latin'],
   variable: '--font-display',
 });
 
-const monoFont = Noto_Sans_Mono({
+const monoFont = Red_Hat_Display({
   subsets: ['latin'],
   variable: '--font-mono',
 });

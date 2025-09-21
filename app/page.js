@@ -74,7 +74,7 @@ export default function Home() {
           </div>
 
           {/* Links */}
-          {/* <div className="flex gap-6 flex-wrap opacity-0 animate-fade-in delay-300">
+          <div className="flex gap-6 flex-wrap opacity-0 animate-fade-in delay-300">
             <a
               href={content.links[0].href}
               target="_blank"
@@ -120,30 +120,15 @@ export default function Home() {
             >
               <Printer size={20} strokeWidth={1.5} />
             </a>
-          </div> */}
+          </div>
 
           {/* Paragraphs */}
           <div className="flex flex-col gap-4 sm:gap-6">
             {content.paragraphs.map((paragraph, index) => {
-              // Calculate delay with a more granular approach for many paragraphs
-              // First paragraphs get individual delays, later ones get grouped
-              let delay;
-              if (index < 3) {
-                // First three paragraphs get their own distinct delays
-                delay = 400 + (index * 100);
-              } else if (index < 6) {
-                // Next three paragraphs share delay-700
-                delay = 700;
-              } else {
-                // Remaining paragraphs share delay-800
-                delay = 800;
-              }
-              
+              var delay = 300 + (index * 100);
               return (
-                <p 
-                  key={index} 
-                  className={`text-gray-900/90 dark:text-gray-300/75 leading-relaxed light opacity-0 animate-fade-in delay-${delay}`}
-                >
+                <p key={index} 
+                  className={`text-gray-900/90 dark:text-gray-300/75 leading-relaxed light opacity-0 animate-fade-in delay-${delay}`}>
                   {renderTextWithLinks(paragraph.text, paragraph.links)}
                 </p>
               );

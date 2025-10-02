@@ -12,7 +12,7 @@ const renderTextWithLinks = (text, links) => {
       const key = part.slice(1, -1);
       const link = links[key];
       return link ? (
-        <a 
+        <a
           key={index}
           href={link.href}
           target="_blank"
@@ -29,9 +29,9 @@ const renderTextWithLinks = (text, links) => {
 // Profile Photo Component
 const ProfilePhoto = ({ name }) => {
   const [showTooltip, setShowTooltip] = useState(false);
-  
+
   return (
-    <div className="w-12 h-12 -mb-3 opacity-0 animate-fade-in delay-300">
+    <div className="w-24 h-24 -mb-3 opacity-0 animate-fade-in delay-300">
       <Image
         src="/shamim.jpg"
         alt={name}
@@ -51,9 +51,8 @@ const ProfilePhoto = ({ name }) => {
         }}
       />
       <span
-        className={`absolute top-0 left-0 transform -translate-y-full mt-2 bg-gray-900 text-white text-xs rounded py-1 px-2 transition-opacity duration-300 whitespace-nowrap dark:bg-gray-700 ${
-          showTooltip ? "opacity-100" : "opacity-0"
-        }`}
+        className={`absolute top-0 left-0 transform -translate-y-full mt-2 bg-gray-900 text-white text-xs rounded py-1 px-2 transition-opacity duration-300 whitespace-nowrap dark:bg-gray-700 ${showTooltip ? "opacity-100" : "opacity-0"
+          }`}
       >
         Sorry, can&apos;t let you do that steve!
       </span>
@@ -64,7 +63,7 @@ const ProfilePhoto = ({ name }) => {
 // Header Component with Name and Tagline
 const Header = ({ name, subtitle }) => (
   <div>
-    <h1 className="text-xl font-bold text-gray-900 dark:text-white opacity-0 animate-fade-in delay-100 font-display">
+    <h1 className="text-2xl font-bold text-gray-900 dark:text-white opacity-0 animate-fade-in delay-100 ">
       {name}
     </h1>
     <p className="font-medium text-sm sm:text-base text-gray-600 dark:text-gray-300 opacity-0 animate-fade-in delay-200">
@@ -73,53 +72,75 @@ const Header = ({ name, subtitle }) => (
   </div>
 );
 
+// Text Links Component
+const TextLinks = ({ links }) => (
+  <div className="flex gap-4 flex-wrap opacity-0 animate-fade-in delay-200">
+    {links.map((link, index) => (
+      <a
+        key={index}
+        href={link.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-gray-900/90 dark:text-gray-300/75 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
+      >
+        {link.text}{index < links.length - 1 && " •"}
+      </a>
+    ))}
+  </div>
+);
+
 // Social Links Component
 const SocialLinks = ({ links }) => (
-  <div className="flex gap-6 flex-wrap opacity-0 animate-fade-in delay-200">
+  <div className="flex gap-4 flex-wrap opacity-0 animate-fade-in delay-200">
     <a
       href={links[0].href}
       target="_blank"
       aria-label={links[0].label}
       title={links[0].label}
-      className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-100"
+      className="underline decoration-gray-600/50 dark:decoration-gray-300/50 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-100"
     >
-      <Linkedin size={20} strokeWidth={1.5} />
+      {/* <Linkedin size={20} strokeWidth={1.5} /> */}
+      LinkedIn
     </a>
     <a
       href={links[1].href}
       target="_blank"
       aria-label={links[1].label}
       title={links[1].label}
-      className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-100"
+      className="underline decoration-gray-600/50 dark:decoration-gray-300/50 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-100"
     >
-      <Github size={20} strokeWidth={1.5} />
+      {/* <Github size={20} strokeWidth={1.5} /> */}
+      Github
     </a>
     <a
       href={links[2].href}
       target="_blank"
       aria-label={links[2].label}
       title={links[2].label}
-      className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-100"
+      className="underline decoration-gray-600/50 dark:decoration-gray-300/50 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-100"
     >
-      <Instagram size={20} strokeWidth={1.5} />
+      {/* <Instagram size={20} strokeWidth={1.5} /> */}
+      Instagram
     </a>
     <a
       href={links[3].href}
       target="_blank"
       aria-label={links[3].label}
       title={links[3].label}
-      className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-100"
+      className="underline decoration-gray-600/50 dark:decoration-gray-300/50 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-100"
     >
-      <Globe size={20} strokeWidth={1.5} />
+      {/* <Globe size={20} strokeWidth={1.5} /> */}
+      Portfolio
     </a>
     <a
       href="#"
       onClick={() => window.print()}
       aria-label="Print page"
       title="Print this page (Why not?)"
-      className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-100"
+      className="underline decoration-gray-600/50 dark:decoration-gray-300/50 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-100"
     >
-      <Printer size={20} strokeWidth={1.5} />
+      {/* <Printer size={20} strokeWidth={1.5} /> */}
+      Print (Why not?)
     </a>
   </div>
 );
@@ -128,11 +149,11 @@ const SocialLinks = ({ links }) => (
 const ContentParagraphs = ({ paragraphs }) => (
   <div className="flex flex-col gap-4 sm:gap-6">
     {paragraphs.map((paragraph, index) => {
-      var delay = 200 + (index * 100);
+      var delay = 100 + (index * 100);
       return (
-        <p 
-          key={index} 
-          className={`text-gray-900/90 dark:text-gray-300/75 leading-relaxed light opacity-0 animate-fade-in delay-${delay}`}
+        <p
+          key={index}
+          className={`text-gray-900/90 dark:text-gray-300/75 leading-loose light opacity-0 animate-fade-in delay-${delay}`}
         >
           {renderTextWithLinks(paragraph.text, paragraph.links)}
         </p>
@@ -173,7 +194,7 @@ const FloatingSearchBar = () => {
         setIsOpen(false);
       }
     };
-    
+
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
@@ -194,19 +215,21 @@ const FloatingSearchBar = () => {
 // Main App Component
 export default function Home() {
   return (
-    <div className="relative rotating-gradient min-h-[100dvh] bg-amber-100/15 dark:bg-gray-950 dark:bg-gradient-to-br dark:from-gray-950 dark:via-teal-950/30 dark:to-black flex flex-col select-none">
+    <div className="relative rotating-gradient min-h-[100dvh] bg-amber-100/15 dark:bg-gray-950 dark:bg-gradient-to-br dark:from-gray-950 dark:via-teal-950/30 dark:to-black flex flex-col select-text">
       <main className="px-4 sm:px-6 py-6 sm:py-12 flex-grow flex flex-col items-center justify-center">
-        <article className="max-w-4xl text-sm sm:text-base text-start p-4 flex flex-col gap-6 sm:gap-8">
+        <article className="max-w-4xl text-sm sm:text-base text-start p-4 flex flex-col gap-8">
+          {/* <ProfilePhoto name={content.name} /> */}
+
           <ProfilePhoto name={content.name} />
-          
+
           <Header name={content.name} subtitle={content.subtitle} />
           
-          <SocialLinks links={content.links} />
-          
+          <TextLinks links={content.textLinks} />
+
           <ContentParagraphs paragraphs={content.paragraphs} />
-          
+
           <Footer footerNote={content.footerNote} resumeUrl={content.resumeUrl} />
-          
+
         </article>
       </main>
     </div>

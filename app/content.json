@@ -1,6 +1,20 @@
 {
   "name": "Shamim Bin Zahid",
-  "subtitle": "Designer, Engineer, Part-time Shitposter.",
+  "subtitle": "Designer, Engineer, Part-time shitposter.",
+  "textLinks": [
+    {
+      "text": "See portfolio",
+      "href": "https://shamemezahid.github.io"
+    },
+    {
+      "text": "Email me",
+      "href": "mailto:shamemezahid@proton.me"
+    },
+    {
+      "text": "Resume (PDF)",
+      "href": "https://drive.google.com/file/u/0/d/1DuNZqDUuYysZGSCUUP0FCWuHVcoqPjurP_Wefh22Z64/preview"
+    }
+  ],
   "links": [
     { 
       "label": "LinkedIn", 
@@ -30,66 +44,84 @@
   ],
   "paragraphs": [
     {
-      "text": "I love to build, break, and fix things. Currently helping recruiters hire faster and better with {airwork}. I've been around startups for about half a decade now (5+ years sounds less dramatic, I guess), which is just long enough to know that \"move fast and break things\" usually means someone else (or you yourself) has to fix it.",
+      "text": "I love to build, break, and fix things. Currently, helping recruiters hire faster and better at {airwork}. I've been working with startups & established businesses for about 5 years now, which is just long enough to learn that \"move fast and break things\" usually means someone else, or you, ends up fixing it.",
       "links": {
-        "airwork": { 
-          "label": "Airwork AI", 
-          "href": "https://airwork.ai",
-          "icon": "Building2"
+        "airwork": {
+          "label": "Airwork AI",
+          "href": "https://airwork.ai"
         }
       }
     },
     {
-      "text": "Growing up in a family of two civil engineers, I was just another high-schooler who loved math when I discovered C programming and got absolutely mind-fucked by it in the best way. In 2018, I got into CSE at the University of Dhaka. Then in my junior year, 2020 hit, and while my university took its time moving online, I went down a rabbit hole of Coursera courses. That is where I found HCI; Human-Computer Interaction, the marriage of engineering and psychology that most CS degrees in Bangladesh seem to ignore.",
-      "links": {}
-    },
-    {
-      "text": "That same year, some peers asked me to design an app for their startup client. That project became my entry into software design as a career where I worked on several client projects for the next two years. After graduating in 2023, I joined a development agency where, despite the \"UI/UX Designer\" title, I was basically asked to be the chef in the kitchen. The loose job description became my playground. I designed systems that scaled to thousands of users while diving into product research, team building, developer training, frontend and backend architecture, and go-to-market strategies. The culture wasn't great, but the freedom to explore everything was invaluable.",
-      "links": {}
-    },
-    {
-      "text": "I've worked with independent founders across diverse industries — e-commerce, recruitment, telco, telemedicine, edtech, logistics and more — on design audits, consultation, and product development. In early 2025, I joined an amazing product-focused recruiting-tech startup doing UX research and design where execution matters and new challenges keep you on your toes.",
-      "links": {}
-    },
-    {
-      "text": "UI/UX design is inherently engineering, not just art and decoration. Making things look good follows making them functional, understandable, and intuitive. Design is a language that communicates the underlying system to the users through interfaces — and those interfaces fundamentally shape how people experience a product.",
-      "links": {}
-    },
-    {
-      "text": "I deeply believe AI-generated art isn't art. By definition, it lacks the flaws, intent, and humanity that make something worth appreciating. What I do love is noticing tiny details in everyday things: the good designs everyone intuitively uses without thinking, and the bad designs that make you sigh. Where most people either don't notice or just live with it, I tend to ask why? what chain of decisions led here? That curiosity is why I love designing and building products — any products, inside or outside the screens.",
-      "links": {}
-    },
-    {
-      "text": "I don't enjoy social media feeds. The mindless scrolling, spoon-fed interests, and content over actually looking up what you want — that's what makes your brain fog. I think real social spaces are messenger apps and discussion threads like Reddit or Substack (Facebook comments don't count), where ideas are exchanged instead of just broadcasted.",
-      "links": {}
-    },
-    {
-      "text": "I've always been drawn to taking on responsibility, from being class rep at college, organizing events as student club VP in university to building teams and processes in startups. There's something satisfying about making things work better for everyone involved.",
-      "links": {}
-    },
-    {
-      "text": " I love to talk (and sometimes argue) about design, products, computers, code, business, economics, philosophy, comic-books, art, music, movies, Oxford commas, and puns. You can check out my {portfolio} website, connect with me on {linkedin}, or follow me on {instagram} — where I post once a year, maybe.",
+      "text": "Growing up in a family of civil engineers. I have always had a hook for tinkering with everyday things and was just another high-schooler who loves math, until in 2015, I discovered C programming, which got me absolutely mind-fucked in the best way. In 2018, I got into {CSE} at the {DU}. In 2020, while classes were slow to move online, I went down a rabbit hole of Coursera courses and discovered Human-Computer Interaction, the marriage of engineering and psychology that most CS programs in Bangladesh seem to kinda ignore.",
       "links": {
-        "portfolio": { 
-          "label": "portfolio-ish", 
-          "href": "https://shamemezahid.github.io",
-          "icon": "ExternalLink"
+        "CSE": {
+          "label": "Computer Science & Engineering",
+          "href": "https://www.du.ac.bd/body/cse"
         },
-        "linkedin": { 
-          "label": "LinkedIn", 
-          "href": "https://linkedin.com/in/shamemezahid",
-          "icon": "Linkedin"
+        "DU": {
+          "label": "University of Dhaka",
+          "href": "https://www.du.ac.bd"
+        }
+      }
+    },
+    {
+      "text": "Around the same time, a group of peers formed a software agency where I was asked to design a website, which became my first paid design gig and the start of my design career. I worked with that startup on several client projects for the next two years until my senior year, where I focused my research thesis in HCI with professors of {dndlab} at DU. Our work on usable privacy and security was later published at a conference in 2024.",
+      "links": {
+        "dndlab": {
+          "label": "DNDLab",
+          "href": "https://dndlab.org"
+        }
+      }
+    },
+    {
+      "text": "After graduating in 2023, I joined another agency although as a UI/UX Designer, I was offered to be the \"chef at the kitchen\" juggling design, product research, sprint planning, QA guidelines, demos, even setting up CI/CD workflows and mentoring new design and frontend trainees. The loose job description became my freedom to wear different hats that gave me a crash course in how product, engineering, and business collide irl.",
+      "links": {}
+    },
+    {
+      "text": "Throughout the years, I have worked with independent founders and businesses across e-commerce, recruitment, telco, telemedicine, edtech, and logistics, doing design audits, consulting, and product development. In early 2025 I joined an amazing team at a VC funded recruiting-tech startup product, Airwork AI, where I work on UX research and design and where execution and measurable outcomes matter.",
+      "links": {}
+    },
+    {
+      "text": "UX is a part of engineering, not just decoration. Visual polish comes after function, clarity, and intuition. Design is a language that expresses the system through interfaces, and those interfaces shape how people use and trust, i.e. experience a product.",
+      "links": {}
+    },
+    {
+      "text": "On AI art, AI tools are great but gen AI outputs are only as \"creative\" as the prompt, the training data, and the constraints it's bound by. It can be interesting, impressive even, but I just can not bring myself to \"appreciate it\". It can create content and style, but not the intent. It lacks the flaws, deliberate intent, and human narrative that I deeply value.",
+      "links": {}
+    },
+    {
+      "text": "I love the tiny details in everyday things. The good designs you use without thinking, and the bad ones that make you sigh. When others shrug, I ask why, which chain of decisions lead to this being produced? That curiosity drives me to design and build products, hopefully making the world slightly better with better designed \"things\".",
+      "links": {}
+    },
+    {
+      "text": "I have been on-and-off social media since 2020. I don't enjoy social media feeds. Mindless scrolling and spoon-fed content recommendations create brain fog. I prefer messenger apps and actual discussion threads, like Reddit, where ideas can be exchanged instead of just broadcast.",
+      "links": {}
+    },
+    {
+      "text": "I've always been drawn to taking on responsibilities, From being class rep at college, organizing events at uni, serving the department's student club working my way up to becoming VP at university to building teams and processes at new startups. There's something satisfying about making things work better for everyone involved.",
+      "links": {}
+    },
+    {
+      "text": "I love to talk (and sometimes argue) about design, products, code, business, economics, philosophy, comic books, art, music, movies, Oxford commas, and puns. See my {portfolio}, connect on {linkedin}, or follow me on {instagram}, where I post maybe once a year.",
+      "links": {
+        "portfolio": {
+          "label": "portfolio",
+          "href": "https://shamemezahid.github.io"
         },
-        "instagram": { 
-          "label": "Instagram", 
-          "href": "https://instagram.com/qwaccmaster69",
-          "icon": "Instagram"
+        "linkedin": {
+          "label": "LinkedIn",
+          "href": "https://linkedin.com/in/shamemezahid"
+        },
+        "instagram": {
+          "label": "Instagram",
+          "href": "https://instagram.com/qwaccmaster69"
         }
       }
     }
   ],
   "readMoreLabel": " Read more",
   "readLessLabel": " Read less",
-  "footerNote": "Built (in a hurry, but) with ❤️ by Shamim",
+  "footerNote": "Built in a hurry, but with ❤️ by Shamim",
   "resumeUrl": "https://drive.google.com/file/u/0/d/1DuNZqDUuYysZGSCUUP0FCWuHVcoqPjurP_Wefh22Z64/preview"
 }

@@ -1,13 +1,14 @@
-import { Red_Hat_Display, DM_Sans } from 'next/font/google';
+import { Red_Hat_Display, DM_Sans, Anaheim, Slabo_13px, Alfa_Slab_One, DM_Serif_Display, Bree_Serif, PT_Serif, PT_Serif_Caption, Noto_Serif, Noto_Serif_Display, Atkinson_Hyperlegible } from 'next/font/google';
 import "./globals.css";
 import Script from 'next/script';
 
-const displayFont = DM_Sans({
+const displayFont = Atkinson_Hyperlegible({
   subsets: ['latin'],
+  weight: ['400', '700'],
   variable: '--font-display',
 });
 
-const monoFont = Red_Hat_Display({
+const monoFont = Anaheim({
   subsets: ['latin'],
   variable: '--font-mono',
 });

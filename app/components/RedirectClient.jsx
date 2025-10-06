@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export function RedirectClient({ keyword, redirectUrl }) {
   const router = useRouter();
@@ -12,7 +12,7 @@ export function RedirectClient({ keyword, redirectUrl }) {
   useEffect(() => {
     // Set link existence state
     setLinkExists(!!redirectUrl);
-    
+
     // Start countdown
     const countdownInterval = setInterval(() => {
       setCountdown((prev) => {
@@ -22,7 +22,7 @@ export function RedirectClient({ keyword, redirectUrl }) {
           if (redirectUrl) {
             window.location.href = redirectUrl;
           } else {
-            router.push('/');
+            router.push("/");
           }
           return 0;
         }
@@ -37,7 +37,7 @@ export function RedirectClient({ keyword, redirectUrl }) {
           clearInterval(progressInterval);
           return 0;
         }
-        return prev - (100 / (3 * 40));
+        return prev - 100 / (3 * 40);
       });
     }, 25);
 
@@ -54,14 +54,59 @@ export function RedirectClient({ keyword, redirectUrl }) {
         <div className="text-center">
           <div className="w-24 h-24 mx-auto">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-              <circle fill="#1e40af" stroke="#1e40af" strokeWidth="16" r="15" cx="40" cy="65">
-                <animate attributeName="cy" calcMode="spline" dur="1.5" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4"></animate>
+              <circle
+                fill="#1e40af"
+                stroke="#1e40af"
+                strokeWidth="16"
+                r="15"
+                cx="40"
+                cy="65"
+              >
+                <animate
+                  attributeName="cy"
+                  calcMode="spline"
+                  dur="1.5"
+                  values="65;135;65;"
+                  keySplines=".5 0 .5 1;.5 0 .5 1"
+                  repeatCount="indefinite"
+                  begin="-.4"
+                ></animate>
               </circle>
-              <circle fill="#1e40af" stroke="#1e40af" strokeWidth="16" r="15" cx="100" cy="65">
-                <animate attributeName="cy" calcMode="spline" dur="1.5" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2"></animate>
+              <circle
+                fill="#1e40af"
+                stroke="#1e40af"
+                strokeWidth="16"
+                r="15"
+                cx="100"
+                cy="65"
+              >
+                <animate
+                  attributeName="cy"
+                  calcMode="spline"
+                  dur="1.5"
+                  values="65;135;65;"
+                  keySplines=".5 0 .5 1;.5 0 .5 1"
+                  repeatCount="indefinite"
+                  begin="-.2"
+                ></animate>
               </circle>
-              <circle fill="#1e40af" stroke="#1e40af" strokeWidth="16" r="15" cx="160" cy="65">
-                <animate attributeName="cy" calcMode="spline" dur="1.5" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0"></animate>
+              <circle
+                fill="#1e40af"
+                stroke="#1e40af"
+                strokeWidth="16"
+                r="15"
+                cx="160"
+                cy="65"
+              >
+                <animate
+                  attributeName="cy"
+                  calcMode="spline"
+                  dur="1.5"
+                  values="65;135;65;"
+                  keySplines=".5 0 .5 1;.5 0 .5 1"
+                  repeatCount="indefinite"
+                  begin="0"
+                ></animate>
               </circle>
             </svg>
           </div>
@@ -73,26 +118,71 @@ export function RedirectClient({ keyword, redirectUrl }) {
   return (
     <div className="rotating-gradient min-h-[100dvh] bg-amber-100/15 dark:bg-gray-950 dark:bg-gradient-to-br dark:from-gray-950 dark:via-teal-950/30 dark:to-black flex flex-col items-center justify-center">
       <div className="text-center max-w-md px-4">
-        <div className='w-24 h-24 mx-auto mb-4'>
-          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'>
-            <circle fill='#1e40af' stroke='#1e40af' strokeWidth='16' r='15' cx='40' cy='65'>
-              <animate attributeName='cy' calcMode='spline' dur='1.5' values='65;135;65;' keySplines='.5 0 .5 1;.5 0 .5 1' repeatCount='indefinite' begin='-.4'></animate>
+        <div className="w-24 h-24 mx-auto mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+            <circle
+              fill="#1e40af"
+              stroke="#1e40af"
+              strokeWidth="16"
+              r="15"
+              cx="40"
+              cy="65"
+            >
+              <animate
+                attributeName="cy"
+                calcMode="spline"
+                dur="1.5"
+                values="65;135;65;"
+                keySplines=".5 0 .5 1;.5 0 .5 1"
+                repeatCount="indefinite"
+                begin="-.4"
+              ></animate>
             </circle>
-            <circle fill='#1e40af' stroke='#1e40af' strokeWidth='16' r='15' cx='100' cy='65'>
-              <animate attributeName='cy' calcMode='spline' dur='1.5' values='65;135;65;' keySplines='.5 0 .5 1;.5 0 .5 1' repeatCount='indefinite' begin='-.2'></animate>
+            <circle
+              fill="#1e40af"
+              stroke="#1e40af"
+              strokeWidth="16"
+              r="15"
+              cx="100"
+              cy="65"
+            >
+              <animate
+                attributeName="cy"
+                calcMode="spline"
+                dur="1.5"
+                values="65;135;65;"
+                keySplines=".5 0 .5 1;.5 0 .5 1"
+                repeatCount="indefinite"
+                begin="-.2"
+              ></animate>
             </circle>
-            <circle fill='#1e40af' stroke='#1e40af' strokeWidth='16' r='15' cx='160' cy='65'>
-              <animate attributeName='cy' calcMode='spline' dur='1.5' values='65;135;65;' keySplines='.5 0 .5 1;.5 0 .5 1' repeatCount='indefinite' begin='0'></animate>
+            <circle
+              fill="#1e40af"
+              stroke="#1e40af"
+              strokeWidth="16"
+              r="15"
+              cx="160"
+              cy="65"
+            >
+              <animate
+                attributeName="cy"
+                calcMode="spline"
+                dur="1.5"
+                values="65;135;65;"
+                keySplines=".5 0 .5 1;.5 0 .5 1"
+                repeatCount="indefinite"
+                begin="0"
+              ></animate>
             </circle>
           </svg>
         </div>
 
         <p className="text-lg leading-relaxed font-medium text-gray-800 dark:text-gray-200 mb-2">
-          {linkExists 
+          {linkExists
             ? `You are being navigated to "${keyword}"`
             : "Link broken or removed."}
         </p>
-        
+
         {!linkExists && (
           <p className="text-gray-800 dark:text-gray-200 mb-2">
             Taking you back home
@@ -100,7 +190,7 @@ export function RedirectClient({ keyword, redirectUrl }) {
         )}
 
         <p className="text-gray-600 dark:text-gray-400 mb-4">
-          Redirecting in {countdown} second{countdown !== 1 ? 's' : ''}...
+          Redirecting in {countdown} second{countdown !== 1 ? "s" : ""}...
         </p>
 
         {/* Progress bar */}

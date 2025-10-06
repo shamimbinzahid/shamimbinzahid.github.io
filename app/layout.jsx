@@ -1,16 +1,12 @@
-import { Red_Hat_Display, DM_Sans, Anaheim, Slabo_13px, Alfa_Slab_One, DM_Serif_Display, Bree_Serif, PT_Serif, PT_Serif_Caption, Noto_Serif, Noto_Serif_Display, Atkinson_Hyperlegible } from 'next/font/google';
+import {
+  Anaheim,
+} from "next/font/google";
 import "./globals.css";
-import Script from 'next/script';
+import Script from "next/script";
 
-const displayFont = Atkinson_Hyperlegible({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-display',
-});
-
-const monoFont = Anaheim({
-  subsets: ['latin'],
-  variable: '--font-mono',
+const displayFont = Anaheim({
+  subsets: ["latin"],
+  variable: "--font-display",
 });
 
 export const metadata = {
@@ -40,19 +36,12 @@ const GoogleAnalytics = () => {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${monoFont.variable} ${displayFont.variable}`}>
+    <html lang="en" className={`${displayFont.variable}`}>
       <head>
-        <link
-          rel="icon"
-          href="shamim.ico"
-          type="image/jpeg"
-          sizes="32x32"
-        />
+        <link rel="icon" href="shamim.ico" type="image/jpeg" sizes="32x32" />
         <GoogleAnalytics />
       </head>
-      <body className={`${monoFont.className}`}>
-        {children}
-      </body>
+      <body className={`${displayFont.className}`}>{children}</body>
     </html>
   );
 }

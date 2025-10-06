@@ -1,6 +1,6 @@
 {
   "name": "Shamim Bin Zahid",
-  "subtitle": "Designer, Engineer, Part-time shitposter.",
+  "subtitle": "Designer, Engineer, Part-time shit-poster.",
   "textLinks": [
     {
       "text": "See portfolio",
@@ -16,23 +16,23 @@
     }
   ],
   "links": [
-    { 
-      "label": "LinkedIn", 
+    {
+      "label": "LinkedIn",
       "href": "https://linkedin.com/in/shamemezahid",
       "icon": "Linkedin"
     },
-    { 
-      "label": "GitHub", 
+    {
+      "label": "GitHub",
       "href": "https://github.com/shamemezahid",
       "icon": "Github"
     },
-    { 
-      "label": "Instagram", 
+    {
+      "label": "Instagram",
       "href": "https://instagram.com/qwaccmaster69",
       "icon": "Instagram"
     },
-    { 
-      "label": "Portfolio", 
+    {
+      "label": "Portfolio",
       "href": "https://shamemezahid.github.io",
       "icon": "Globe"
     },
@@ -44,7 +44,7 @@
   ],
   "paragraphs": [
     {
-      "text": "I love to build, break, and fix things. Currently, helping recruiters hire faster and better at {airwork}. I've been working with startups & established businesses for about 5 years now, which is just long enough to learn that \"move fast and break things\" usually means someone else, or you, ends up fixing it.",
+      "text": "I love to build, break, and fix things. Currently, helping recruiters hire faster and better at {airwork}. I've been helping with both startups & established businesses creating software design and development solutions for about 5 years now, which is just long enough to learn that \"move fast and break things\" usually means someone else, or you, ends up fixing it.",
       "links": {
         "airwork": {
           "label": "Airwork AI",
@@ -79,7 +79,7 @@
       "links": {}
     },
     {
-      "text": "Throughout the years, I have worked with independent founders and businesses across e-commerce, recruitment, telco, telemedicine, edtech, and logistics, doing design audits, consulting, and product development. In early 2025 I joined an amazing team at a VC funded recruiting-tech startup product, Airwork AI, where I work on UX research and design and where execution and measurable outcomes matter.",
+      "text": "Throughout the years, I have worked with independent founders and businesses across e-commerce, recruitment, telco, tele-medicine, ed-tech, and logistics, doing design audits, consulting, and product development. In early 2025 I joined an amazing team at a VC funded recruiting-tech startup product, Airwork AI, where I work on UX research and design and where execution and measurable outcomes matter.",
       "links": {}
     },
     {
@@ -103,7 +103,7 @@
       "links": {}
     },
     {
-      "text": "I love to talk (and sometimes argue) about design, products, code, business, economics, philosophy, comic books, art, music, movies, Oxford commas, and puns. See my {portfolio}, connect on {linkedin}, or follow me on {instagram}, where I post maybe once a year.",
+      "text": "I love to talk (and sometimes argue) about design, products, code, business, economics, philosophy, comic books, art, music, movies, Oxford commas, and puns. See my {portfolio}, connect on {linkedin}, or follow me on {instagram}, where I post once a year, maybe.",
       "links": {
         "portfolio": {
           "label": "portfolio",

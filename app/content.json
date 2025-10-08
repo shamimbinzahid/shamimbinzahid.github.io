@@ -1,6 +1,6 @@
 {
   "name": "Shamim Bin Zahid",
-  "subtitle": "The Product Guy, Designer, Engineer, Part-time shit-poster.",
+  "subtitle": "Designer, Engineer, Part-time shit-poster.",
   "textLinks": [
     {
       "text": "See portfolio",
@@ -44,8 +44,12 @@
   ],
   "paragraphs": [
     {
-      "text": "I build, break, and fix things. Currently, I'm helping recruiters hire faster and better at {airwork}. I’ve worked with startups and growing teams helping them design and build their digital products and online presence for the past five years, which is just long enough to learn that \"move fast and break things\" usually means someone (often you) has to go and fix it eventually.",
+      "text": "I build, break, and fix things. Currently, I'm helping recruiters hire faster and better at {airwork}. I’ve worked with startups and growing teams helping them design and build their digital products and online presence for the past five years, which is just long enough to learn that {moveFastBreakFast} usually means someone (often you) has to go and fix it eventually.",
       "links": {
+        "moveFastBreakFast": {
+          "label": "\"move fast and break things\"",
+          "href": "https://en.wikipedia.org/wiki/Move_fast_and_break_things"
+        },
         "airwork": {
           "label": "Airwork AI",
           "href": "https://airwork.ai"
@@ -91,7 +95,11 @@
       "links": {}
     },
     {
-      "text": "I love to talk (and sometimes argue) and know nothing about design, products, code, business, tech news, economics, philosophy, society, comic books, art, music, movies, oxford commas, and puns. See my {portfolio}, connect on {linkedin}, or follow me on {instagram}, where I post once a year, maybe.",
+      "text": "I love to talk (and sometimes argue) and know nothing about design, products, coding, business, tech news, pc-building, right to repair, privacy, economics, philosophy, society, comic books, art, photography, music, movies, puns, oxford commas, and more.",
+      "links": {}
+    },
+    {
+      "text": "Checkout my {portfolio} here, connect with me on {linkedin}, or follow me on {instagram}, where I post once a year, maybe.",
       "links": {
         "portfolio": {
           "label": "portfolio",
@@ -103,7 +111,7 @@
         },
         "instagram": {
           "label": "Instagram",
-          "href": "https://instagram.com/qwaccmaster69"
+          "href": "https://instagram.com/qwaccmaster69" 
         }
       }
     }
@@ -122,8 +130,29 @@
       "links": {}
     }
   ],
-  "readMoreLabel": " Read more",
-  "readLessLabel": " Read less",
-  "footerNote": "Built in a hurry, but with ❤️ by Shamim",
+  "navParagraphHome": {
+      "text": "checkout my {portfolio} here. Connect with me on {linkedin}, or follow me on {instagram}, where I post once a year, maybe. You can find me on most social platforms as {shamemezahid}.",
+      "links": {
+        "portfolio": {
+          "label": "portfolio",
+          "href": "https://shamemezahid.github.io"
+        },
+        "linkedin": {
+          "label": "LinkedIn",
+          "href": "https://linkedin.com/in/shamemezahid"
+        },
+        "instagram": {
+          "label": "Instagram",
+          "href": "https://instagram.com/qwaccmaster69" 
+        },
+        "shamemezahid": {
+          "label": "@shamemezahid",
+          "href": "https://www.google.com/search?q=%22shamemezahid%22"
+        }
+      }
+    },
+    "readMoreLabel": " Read more",
+    "readLessLabel": " Read less",
+    "footerNote": "Built in a hurry, but with ❤️ by Shamim",
   "resumeUrl": "https://drive.google.com/file/u/0/d/1DuNZqDUuYysZGSCUUP0FCWuHVcoqPjurP_Wefh22Z64/preview"
 }

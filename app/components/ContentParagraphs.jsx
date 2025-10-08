@@ -1,5 +1,4 @@
 import { renderTextWithLinks } from "./utils";
-import Link from "next/link";
 
 export const ContentParagraphs = ({ paragraphs }) => (
   <div className="flex flex-col gap-4 sm:gap-6">
@@ -8,7 +7,7 @@ export const ContentParagraphs = ({ paragraphs }) => (
       return (
         <p
           key={index}
-          className={`text-color-main/90 leading-loose light opacity-0 animate-fade-in delay-${delay}`}
+          className={`text-color-sub leading-loose light opacity-0 animate-fade-in delay-${delay}`}
         >
           {renderTextWithLinks(paragraph.text, paragraph.links)}
         </p>
@@ -19,17 +18,22 @@ export const ContentParagraphs = ({ paragraphs }) => (
 
 // Content Paragraphs Component (Home version - only first and last)
 export const ContentParagraphsHome = ({ paragraphs }) => {
-  const firstParagraph = paragraphs[0];
-  const lastParagraph = paragraphs[paragraphs.length - 1];
+  if (paragraphs.length === 0) return null;
+  if (paragraphs.length === 1)
+    return <ContentParagraphs paragraphs={paragraphs} />;
+
+  const paragraphIndexes = [0, paragraphs.length - 2];
 
   return (
     <div className="flex flex-col gap-4 sm:gap-6">
-      <p className="text-color-main/90 leading-loose light opacity-0 animate-fade-in delay-400">
-        {renderTextWithLinks(firstParagraph.text, firstParagraph.links)}
-      </p>
-      <p className="text-color-main/90 leading-loose light opacity-0 animate-fade-in delay-500">
-        {renderTextWithLinks(lastParagraph.text, lastParagraph.links)}
-      </p>
+      {paragraphIndexes.map((index, i) => (
+        <p
+          key={index}
+          className={`text-color-sub leading-loose light opacity-0 animate-fade-in delay-${200 + i * 100}`}
+        >
+          {renderTextWithLinks(paragraphs[index].text, paragraphs[index].links)}
+        </p>
+      ))}
     </div>
   );
 };

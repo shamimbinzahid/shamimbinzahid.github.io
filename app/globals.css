@@ -81,6 +81,7 @@
   text-decoration: underline;
   text-decoration-color: rgb(75 85 99 / 0.5);
   transition: color 0.2s;
+  font-weight: 500;
 }
 
 .text-color-link:hover {

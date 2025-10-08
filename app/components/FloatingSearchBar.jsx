@@ -45,7 +45,7 @@ export const FloatingSearchBar = ({ content }) => {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 bg-gray-900 dark:bg-white text-white dark:text-gray-900 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-50"
+        className="fixed bottom-6 right-6 bg-gray-900 ark:bg-white text-white ark:text-gray-900 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-50"
         aria-label="Open search"
       >
         <Search size={20} />
@@ -53,8 +53,8 @@ export const FloatingSearchBar = ({ content }) => {
 
       {isOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-start justify-center pt-20">
-          <div className="bg-white dark:bg-gray-900 rounded-lg shadow-2xl w-full max-w-2xl mx-4 max-h-[80vh] overflow-hidden">
-            <div className="p-4 border-b border-gray-200 dark:border-gray-700">
+          <div className="bg-white ark:bg-gray-900 rounded-lg shadow-2xl w-full max-w-2xl mx-4 max-h-[80vh] overflow-hidden">
+            <div className="p-4 border-b border-gray-200 ark:border-gray-700">
               <div className="flex items-center gap-3">
                 <Search size={20} className="text-gray-400" />
                 <input
@@ -62,7 +62,7 @@ export const FloatingSearchBar = ({ content }) => {
                   placeholder="Search content..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="flex-1 bg-transparent border-none outline-none text-gray-900 dark:text-white placeholder-gray-500"
+                  className="flex-1 bg-transparent border-none outline-none text-gray-900 ark:text-white placeholder-gray-500"
                   autoFocus
                 />
                 <button
@@ -70,7 +70,7 @@ export const FloatingSearchBar = ({ content }) => {
                     setIsOpen(false);
                     setSearchTerm("");
                   }}
-                  className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                  className="text-gray-400 hover:text-gray-600 ark:hover:text-gray-300"
                   aria-label="Close search"
                 >
                   <X size={20} />
@@ -81,18 +81,18 @@ export const FloatingSearchBar = ({ content }) => {
             <div className="max-h-96 overflow-y-auto">
               {searchResults.length > 0 ? (
                 <div className="p-4">
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                  <p className="text-sm text-gray-700 ark:text-gray-300 mb-3">
                     Found {searchResults.length} result
                     {searchResults.length !== 1 ? "s" : ""}
                   </p>
                   {searchResults.map((result) => (
                     <div
                       key={result.index}
-                      className="mb-3 p-3 bg-gray-50 dark:bg-gray-800 rounded cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                      className="mb-3 p-3 bg-gray-50 ark:bg-gray-800 rounded cursor-pointer hover:bg-gray-100 ark:hover:bg-gray-700 transition-colors"
                       onClick={() => scrollToParagraph(result.index)}
                     >
                       <p
-                        className="text-sm text-gray-900 dark:text-white"
+                        className="text-sm text-gray-900 ark:text-white"
                         dangerouslySetInnerHTML={{
                           __html: highlightText(result.paragraph, searchTerm),
                         }}
@@ -101,11 +101,11 @@ export const FloatingSearchBar = ({ content }) => {
                   ))}
                 </div>
               ) : searchTerm.trim() !== "" ? (
-                <div className="p-4 text-center text-gray-500 dark:text-gray-400">
+                <div className="p-4 text-center text-gray-500 ark:text-gray-400">
                   No results found for "{searchTerm}"
                 </div>
               ) : (
-                <div className="p-4 text-center text-gray-500 dark:text-gray-400">
+                <div className="p-4 text-center text-gray-500 ark:text-gray-400">
                   Start typing to search...
                 </div>
               )}

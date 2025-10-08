@@ -5,7 +5,7 @@ export const SocialLinks = ({ links }) => (
       target="_blank"
       aria-label={links[0].label}
       title={links[0].label}
-      className="underline decoration-gray-600/50 dark:decoration-gray-300/50 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-100"
+      className="underline decoration-gray-600/50 ark:decoration-gray-300/50 text-gray-700 ark:text-gray-300 hover:text-gray-900 ark:hover:text-white transition-colors duration-100"
     >
       LinkedIn
     </a>
@@ -14,7 +14,7 @@ export const SocialLinks = ({ links }) => (
       target="_blank"
       aria-label={links[1].label}
       title={links[1].label}
-      className="underline decoration-gray-600/50 dark:decoration-gray-300/50 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-100"
+      className="underline decoration-gray-600/50 ark:decoration-gray-300/50 text-gray-700 ark:text-gray-300 hover:text-gray-900 ark:hover:text-white transition-colors duration-100"
     >
       Github
     </a>
@@ -23,7 +23,7 @@ export const SocialLinks = ({ links }) => (
       target="_blank"
       aria-label={links[2].label}
       title={links[2].label}
-      className="underline decoration-gray-600/50 dark:decoration-gray-300/50 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-100"
+      className="underline decoration-gray-600/50 ark:decoration-gray-300/50 text-gray-700 ark:text-gray-300 hover:text-gray-900 ark:hover:text-white transition-colors duration-100"
     >
       Instagram
     </a>
@@ -32,7 +32,7 @@ export const SocialLinks = ({ links }) => (
       target="_blank"
       aria-label={links[3].label}
       title={links[3].label}
-      className="underline decoration-gray-600/50 dark:decoration-gray-300/50 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-100"
+      className="underline decoration-gray-600/50 ark:decoration-gray-300/50 text-gray-700 ark:text-gray-300 hover:text-gray-900 ark:hover:text-white transition-colors duration-100"
     >
       Portfolio
     </a>
@@ -41,7 +41,7 @@ export const SocialLinks = ({ links }) => (
       onClick={() => window.print()}
       aria-label="Print page"
       title="Print this page (Why not?)"
-      className="underline decoration-gray-600/50 dark:decoration-gray-300/50 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-100"
+      className="underline decoration-gray-600/50 ark:decoration-gray-300/50 text-gray-700 ark:text-gray-300 hover:text-gray-900 ark:hover:text-white transition-colors duration-100"
     >
       Print (Why not?)
     </a>

@@ -44,7 +44,7 @@
   ],
   "paragraphs": [
     {
-      "text": "I love to build, break, and fix things. Currently, helping recruiters hire faster and better at {airwork}. I've been helping with both startups & established businesses creating software design and development solutions for about 5 years now, which is just long enough to learn that \"move fast and break things\" usually means someone else, or you, ends up fixing it.",
+      "text": "I build, break, and fix things. Currently, I'm helping recruiters hire faster and better at {airwork}. I’ve worked with startups and growing teams helping them design and build their digital products and online presence for the past five years, which is just long enough to learn that \"move fast and break things\" usually means someone (often you) has to go and fix it eventually.",
       "links": {
         "airwork": {
           "label": "Airwork AI",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "text": "Growing up in a family of civil engineers. I have always had a hook for tinkering with everyday things and was just another high-schooler who loves math, until in 2015, I discovered C programming, which got me absolutely mind-fucked in the best way. In 2018, I got into {CSE} at the {DU}. In 2020, while classes were slow to move online, I went down a rabbit hole of Coursera courses and discovered Human-Computer Interaction, the marriage of engineering and psychology that most CS programs in Bangladesh seem to kinda ignore.",
+      "text": "Growing up in a family of two (civil) engineers. I have always had a hook for tinkering with everyday things and was just another high-schooler who loves math, until in 2015, I discovered C programming, which got me absolutely mind-fucked in the best way. In 2018, I got into {CSE} at the {DU}. In 2020, while classes were slow to move online, I went down a rabbit hole of Coursera courses and discovered Human-Computer Interaction, the marriage of engineering and psychology that most CS programs in Bangladesh seem to kinda ignore.",
       "links": {
         "CSE": {
           "label": "Computer Science & Engineering",
@@ -83,19 +83,7 @@
       "links": {}
     },
     {
-      "text": "UX is a part of engineering, not just decoration. Visual polish comes after function, clarity, and intuition. Design is a language that expresses the system through interfaces, and those interfaces shape how people use and trust, i.e. experience a product.",
-      "links": {}
-    },
-    {
-      "text": "On AI art, AI tools are great but gen AI outputs are only as \"creative\" as the prompt, the training data, and the constraints it's bound by. It can be interesting, impressive even, but I just can not bring myself to \"appreciate it\". It can create content and style, but not the intent. It lacks the flaws, deliberate intent, and human narrative that I deeply value.",
-      "links": {}
-    },
-    {
       "text": "I love the tiny details in everyday things. The good designs you use without thinking, and the bad ones that make you sigh. When others shrug, I ask why, which chain of decisions lead to this being produced? That curiosity drives me to design and build products, hopefully making the world slightly better with better designed \"things\".",
-      "links": {}
-    },
-    {
-      "text": "I have been on-and-off social media since 2020. I don't enjoy social media feeds. Mindless scrolling and spoon-fed content recommendations create brain fog. I prefer messenger apps and actual discussion threads, like Reddit, where ideas can be exchanged instead of just broadcast.",
       "links": {}
     },
     {
@@ -103,7 +91,7 @@
       "links": {}
     },
     {
-      "text": "I love to talk (and sometimes argue) about design, products, code, business, economics, philosophy, comic books, art, music, movies, Oxford commas, and puns. See my {portfolio}, connect on {linkedin}, or follow me on {instagram}, where I post once a year, maybe.",
+      "text": "I love to talk (and sometimes argue) and know nothing about design, products, code, business, tech news, economics, philosophy, society, comic books, art, music, movies, oxford commas, and puns. See my {portfolio}, connect on {linkedin}, or follow me on {instagram}, where I post once a year, maybe.",
       "links": {
         "portfolio": {
           "label": "portfolio",
@@ -118,6 +106,20 @@
           "href": "https://instagram.com/qwaccmaster69"
         }
       }
+    }
+  ],
+  "opinions": [
+    {
+      "text": "UX is a part of engineering, not just decoration. Visual polish comes after function, clarity, and intuition. Design is a language that expresses the system through interfaces, and those interfaces shape how people use and trust, i.e. experience a product.",
+      "links": {}
+    },
+    {
+      "text": "On AI art, AI tools are great but gen AI outputs are only as \"creative\" as the prompt, the training data, and the constraints it's bound by. It can be interesting, impressive even, but I just can not bring myself to \"appreciate it\". It can create content and style, but not the intent. It lacks the flaws, deliberate intent, and human narrative that I deeply value.",
+      "links": {}
+    },
+    {
+      "text": "I have been on-and-off social media since 2020. I don't enjoy social media feeds. Mindless scrolling and spoon-fed content recommendations create brain fog. I prefer messenger apps and actual discussion threads, like Reddit, where ideas can be exchanged instead of just broadcast.",
+      "links": {}
     }
   ],
   "readMoreLabel": " Read more",

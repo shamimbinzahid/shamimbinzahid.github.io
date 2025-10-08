@@ -10,7 +10,7 @@ export const renderTextWithLinks = (text, links) => {
           href={link.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline decoration-gray-600/50 dark:decoration-gray-300/50 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-100"
+          className="underline decoration-gray-600/50 ark:decoration-gray-300/50 text-gray-700 ark:text-gray-300 hover:text-gray-900 ark:hover:text-white transition-colors duration-100"
         >
           {link.label}
         </a>

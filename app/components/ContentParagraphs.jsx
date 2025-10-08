@@ -8,7 +8,7 @@ export const ContentParagraphs = ({ paragraphs }) => (
       return (
         <p
           key={index}
-          className={`text-gray-900/90 dark:text-gray-300/75 leading-loose light opacity-0 animate-fade-in delay-${delay}`}
+          className={`text-gray-900/90 ark:text-gray-300/75 leading-loose light opacity-0 animate-fade-in delay-${delay}`}
         >
           {renderTextWithLinks(paragraph.text, paragraph.links)}
         </p>
@@ -24,10 +24,10 @@ export const ContentParagraphsHome = ({ paragraphs }) => {
 
   return (
     <div className="flex flex-col gap-4 sm:gap-6">
-      <p className="text-gray-900/90 dark:text-gray-300/75 leading-loose light opacity-0 animate-fade-in delay-400">
+      <p className="text-gray-900/90 ark:text-gray-300/75 leading-loose light opacity-0 animate-fade-in delay-400">
         {renderTextWithLinks(firstParagraph.text, firstParagraph.links)}
       </p>
-      <p className="text-gray-900/90 dark:text-gray-300/75 leading-loose light opacity-0 animate-fade-in delay-500">
+      <p className="text-gray-900/90 ark:text-gray-300/75 leading-loose light opacity-0 animate-fade-in delay-500">
         {renderTextWithLinks(lastParagraph.text, lastParagraph.links)}
       </p>
     </div>

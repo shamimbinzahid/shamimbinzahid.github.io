@@ -59,6 +59,23 @@
   font-family: "Red Hat Display", sans-serif;
 }
 
+/* Global text color utilities */
+.text-color-main {
+  color: rgb(17 24 39);
+}
+
+.dark .text-color-main {
+  color: rgb(229 231 235);
+}
+
+.text-color-sub {
+  color: rgb(55 65 81);
+}
+
+.dark .text-color-sub {
+  color: rgb(209 213 219);
+}
+
 /* Slowly rotating gradient background overlay (simple, reusable) */
 @keyframes spin-slow {
   to { transform: rotate(360deg); }

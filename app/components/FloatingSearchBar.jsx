@@ -62,7 +62,7 @@ export const FloatingSearchBar = ({ content }) => {
                   placeholder="Search content..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="flex-1 bg-transparent border-none outline-none text-gray-900 ark:text-white placeholder-gray-500"
+                  className="flex-1 bg-transparent border-none outline-none text-color-main placeholder-gray-500"
                   autoFocus
                 />
                 <button
@@ -92,7 +92,7 @@ export const FloatingSearchBar = ({ content }) => {
                       onClick={() => scrollToParagraph(result.index)}
                     >
                       <p
-                        className="text-sm text-gray-900 ark:text-white"
+                        className="text-sm text-color-main"
                         dangerouslySetInnerHTML={{
                           __html: highlightText(result.paragraph, searchTerm),
                         }}

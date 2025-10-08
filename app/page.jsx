@@ -20,7 +20,7 @@ export default function Home() {
 
           <ContentParagraphsHome paragraphs={content.paragraphs} />
 
-          <span className="opacity-0 animate-fade-in delay-600 text-gray-700 ark:text-gray-300">
+          <span className="opacity-0 animate-fade-in delay-600 text-color-sub">
             <Link
               href="/about"
               className="underline decoration-gray-600/50 ark:decoration-gray-300/50 hover:text-gray-900 ark:hover:text-white transition-colors duration-200"

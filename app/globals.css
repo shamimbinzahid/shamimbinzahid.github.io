@@ -76,6 +76,25 @@
   color: rgb(209 213 219);
 }
 
+/* Global text link styles */
+.text-color-link {
+  text-decoration: underline;
+  text-decoration-color: rgb(75 85 99 / 0.5);
+  transition: color 0.2s;
+}
+
+.text-color-link:hover {
+  color: rgb(17 24 39);
+}
+
+.dark .text-color-link {
+  text-decoration-color: rgb(209 213 219 / 0.5);
+}
+
+.dark .text-color-link:hover {
+  color: rgb(255 255 255);
+}
+
 /* Slowly rotating gradient background overlay (simple, reusable) */
 @keyframes spin-slow {
   to { transform: rotate(360deg); }

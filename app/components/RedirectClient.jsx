@@ -50,7 +50,7 @@ export function RedirectClient({ keyword, redirectUrl }) {
   // Show loading until we determine if link exists
   if (linkExists === null) {
     return (
-      <div className="rotating-gradient min-h-[100dvh] bg-amber-100/15 ark:bg-gray-950 ark:bg-gradient-to-br ark:from-gray-950 ark:via-teal-950/30 ark:to-black flex flex-col items-center justify-center">
+      <div className="rotating-gradient min-h-[100dvh] bg-amber-100/15 dark:bg-gray-950 dark:bg-gradient-to-br dark:from-gray-950 dark:via-teal-950/30 dark:to-black flex flex-col items-center justify-center">
         <div className="text-center">
           <div className="w-24 h-24 mx-auto">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
@@ -116,7 +116,7 @@ export function RedirectClient({ keyword, redirectUrl }) {
   }
 
   return (
-    <div className="rotating-gradient min-h-[100dvh] bg-amber-100/15 ark:bg-gray-950 ark:bg-gradient-to-br ark:from-gray-950 ark:via-teal-950/30 ark:to-black flex flex-col items-center justify-center">
+    <div className="rotating-gradient min-h-[100dvh] bg-amber-100/15 dark:bg-gray-950 dark:bg-gradient-to-br dark:from-gray-950 dark:via-teal-950/30 dark:to-black flex flex-col items-center justify-center">
       <div className="text-center max-w-md px-4">
         <div className="w-24 h-24 mx-auto mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
@@ -177,26 +177,26 @@ export function RedirectClient({ keyword, redirectUrl }) {
           </svg>
         </div>
 
-        <p className="text-lg leading-relaxed font-medium text-gray-800 ark:text-gray-200 mb-2">
+        <p className="text-lg leading-relaxed font-medium text-gray-800 dark:text-gray-200 mb-2">
           {linkExists
             ? `You are being navigated to "${keyword}"`
             : "Link broken or removed."}
         </p>
 
         {!linkExists && (
-          <p className="text-gray-800 ark:text-gray-200 mb-2">
+          <p className="text-gray-800 dark:text-gray-200 mb-2">
             Taking you back home
           </p>
         )}
 
-        <p className="text-gray-700 ark:text-gray-300 mb-4">
+        <p className="text-gray-700 dark:text-gray-300 mb-4">
           Redirecting in {countdown} second{countdown !== 1 ? "s" : ""}...
         </p>
 
         {/* Progress bar */}
-        <div className="w-full bg-gray-200 ark:bg-gray-700 rounded-full h-2.5 mb-6">
+        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mb-6">
           <div
-            className="bg-blue-900 ark:bg-blue-800 h-2.5 rounded-full transition-all duration-300 ease-linear"
+            className="bg-blue-900 dark:bg-blue-800 h-2.5 rounded-full transition-all duration-300 ease-linear"
             style={{ width: `${progress}%` }}
           ></div>
         </div>

@@ -61,39 +61,16 @@
 
 /* Global text color utilities */
 .text-color-main {
-  color: rgb(17 24 39);
-}
-
-.dark .text-color-main {
-  color: rgb(229 231 235);
+  @apply text-gray-900  dark:text-gray-200;
 }
 
 .text-color-sub {
-  color: rgb(55 65 81);
-}
-
-.dark .text-color-sub {
-  color: rgb(209 213 219);
+  @apply text-gray-700  dark:text-gray-300;
 }
 
 /* Global text link styles */
 .text-color-link {
-  text-decoration: underline;
-  text-decoration-color: rgb(75 85 99 / 0.5);
-  transition: color 0.2s;
-  font-weight: 500;
-}
-
-.text-color-link:hover {
-  color: rgb(17 24 39);
-}
-
-.dark .text-color-link {
-  text-decoration-color: rgb(209 213 219 / 0.5);
-}
-
-.dark .text-color-link:hover {
-  color: rgb(255 255 255);
+  @apply underline decoration-gray-600/75  dark:decoration-gray-300/75 hover:text-gray-900  dark:hover:text-white transition-colors duration-200 font-medium;
 }
 
 /* Slowly rotating gradient background overlay (simple, reusable) */
@@ -107,15 +84,15 @@
   overflow: hidden; /* ensure the fixed layer doesn't cause scrollbars in some browsers */
 }
 
-/* Only show the animated layer in dark mode to keep light theme clean */
-@media (prefers-color-scheme: dark) {
+/* Only show the animated layer in  dark mode to keep light theme clean */
+@media (prefers-color-scheme:  dark) {
   .rotating-gradient::before {
     content: "";
     position: fixed; /* fixed so it stays put on scroll and fills the viewport */
     inset: -30vmax; /* oversized to avoid clipping while rotating */
     z-index: 0;
     pointer-events: none;
-    /* Base subtle conic gradient with dark teal accents */
+    /* Base subtle conic gradient with  dark teal accents */
     background: conic-gradient(
       from 0deg at 50% 50%,
       rgba(4, 47, 46, 0.25) 0deg,

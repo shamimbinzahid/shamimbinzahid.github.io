@@ -6,12 +6,12 @@ export const TextLinks = ({ links }) => (
           href={link.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-700 ark:text-gray-300 hover:text-gray-900 ark:hover:text-white transition-colors duration-200"
+          className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
         >
           {link.text}
         </a>
         {index < links.length - 1 && (
-          <span className="text-gray-700 ark:text-gray-300">•</span>
+          <span className="text-gray-700 dark:text-gray-300">•</span>
         )}
       </div>
     ))}

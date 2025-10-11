@@ -26,7 +26,7 @@ export const ProfilePhoto = ({ name }) => {
         }}
       />
       <span
-        className={`absolute top-0 left-0 transform -translate-y-full mt-2 bg-gray-900 text-white text-xs rounded py-1 px-2 transition-opacity duration-300 whitespace-nowrap ark:bg-gray-700 ${
+        className={`absolute top-0 left-0 transform -translate-y-full mt-2 bg-gray-900 text-white text-xs rounded py-1 px-2 transition-opacity duration-300 whitespace-nowrap dark:bg-gray-700 ${
           showTooltip ? "opacity-100" : "opacity-0"
         }`}
       >

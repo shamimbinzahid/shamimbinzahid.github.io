@@ -1,5 +1,5 @@
 export const SocialLinks = ({ links }) => (
-  <div className="flex gap-4 flex-wrap opacity-0 animate-fade-in delay-200">
+  <div className="flex gap-4 flex-wrap opacity-0 animate-fade-in delay-0200">
     <a
       href={links[0].href}
       target="_blank"

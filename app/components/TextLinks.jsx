@@ -1,5 +1,5 @@
 export const TextLinks = ({ links }) => (
-  <div className="flex gap-3 flex-wrap opacity-0 animate-fade-in delay-300">
+  <div className="flex gap-3 flex-wrap opacity-0 animate-fade-in delay-0300">
     {links.map((link, index) => (
       <div key={index} className="flex items-center gap-4">
         <a

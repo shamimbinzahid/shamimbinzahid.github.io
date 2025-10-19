@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 export const BackButton = () => (
-  <div className="opacity-0 animate-fade-in delay-50">
+  <div className="opacity-0 animate-fade-in delay-050">
     <Link
       href="/"
       className="text-color-link text-color-sub transition-colors duration-200 inline-flex items-center gap-2"

@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -15,43 +18,83 @@
   animation: fadeIn 0.4s ease-out forwards;
 }
 
-.delay-100 {
+.delay-0050 {
+  animation-delay: 50ms;
+}
+
+.delay-0100 {
   animation-delay: 100ms;
 }
 
-.delay-200 {
+.delay-0150 {
+  animation-delay: 150ms;
+}
+
+.delay-0200 {
   animation-delay: 200ms;
 }
 
-.delay-300 {
+.delay-0250 {
+  animation-delay: 250ms;
+}
+
+.delay-0300 {
   animation-delay: 300ms;
 }
 
-.delay-400 {
+.delay-0350 {
+  animation-delay: 350ms;
+}
+
+.delay-0400 {
   animation-delay: 400ms;
 }
 
-.delay-500 {
+.delay-0450 {
+  animation-delay: 450ms;
+}
+
+.delay-0500 {
   animation-delay: 500ms;
 }
 
-.delay-600 {
+.delay-0550 {
+  animation-delay: 550ms;
+}
+
+.delay-0600 {
   animation-delay: 600ms;
 }
 
-.delay-700 {
+.delay-0650 {
+  animation-delay: 650ms;
+}
+
+.delay-0700 {
   animation-delay: 700ms;
 }
 
-.delay-800 {
+.delay-0750 {
+  animation-delay: 750ms;
+}
+
+.delay-0800 {
   animation-delay: 800ms;
 }
 
-.delay-900 {
+.delay-0850 {
+  animation-delay: 850ms;
+}
+
+.delay-0900 {
   animation-delay: 900ms;
 }
 
-.delay-1000 {
+.delay-0950 {
+  animation-delay: 950ms;
+}
+
+.delay-01000 {
   animation-delay: 1000ms;
 }
 
@@ -70,7 +113,7 @@
 
 /* Global text link styles */
 .text-color-link {
-  @apply underline decoration-gray-600/75  dark:decoration-gray-300/75 hover:text-gray-900  dark:hover:text-white transition-colors duration-200 font-medium;
+  @apply underline decoration-gray-600/75  dark:decoration-gray-300/75 hover:text-gray-900  dark:hover:text-white duration-200 font-medium;
 }
 
 /* Slowly rotating gradient background overlay (simple, reusable) */

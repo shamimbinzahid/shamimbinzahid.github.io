@@ -1,13 +1,15 @@
 import { renderTextWithLinks } from "./utils";
 
+var start_delay = 200;
+var step_delay = 50;
+
 export const ContentParagraphs = ({ paragraphs }) => (
   <div className="flex flex-col gap-4 sm:gap-6">
     {paragraphs.map((paragraph, index) => {
-      var delay = 100 + index * 100;
       return (
         <p
           key={index}
-          className={`text-color-sub leading-loose light opacity-0 animate-fade-in delay-${delay}`}
+          className={`text-color-sub leading-loose light opacity-0 animate-fade-in delay-0${start_delay + index *  step_delay}`}
         >
           {renderTextWithLinks(paragraph.text, paragraph.links)}
         </p>
@@ -29,7 +31,7 @@ export const ContentParagraphsHome = ({ paragraphs }) => {
       {paragraphIndexes.map((index, i) => (
         <p
           key={index}
-          className={`text-color-sub leading-loose light opacity-0 animate-fade-in delay-${200 + i * 100}`}
+          className={`text-color-sub leading-loose light opacity-0 animate-fade-in delay-0${start_delay + i * step_delay}`}
         >
           {renderTextWithLinks(paragraphs[index].text, paragraphs[index].links)}
         </p>

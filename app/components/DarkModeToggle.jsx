@@ -40,12 +40,13 @@ function DarkModeToggle() {
 
       <button
         onClick={toggleTheme}
-        className="fixed z-50 top-12 right-12 w-9 h-9 p-2 rounded-xl  backdrop-blur-sm bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 opacity-0 animate-fade-in flex items-center text-color-sub hover:text-color-main transition-colors cursor-pointer"
+        className="fixed z-50 top-12 right-12 w-9 h-9 p-2 rounded-xl  backdrop-blur-sm hover:bg-black/10 dark:hover:bg-white/10 opacity-0 animate-fade-in flex items-center text-color-sub hover:text-color-main transition-colors cursor-pointer"
         aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+        title={isDark ? "Switch to light mode" : "Switch to dark mode"}
       >
         {isMounted ? (
           <>
-            <MoonIcon
+            <SunIcon
               strokeWidth={1.5}
               className={`h-5 w-5 absolute transition-all duration-500 ease-in-out ${
                 isDark
@@ -53,7 +54,7 @@ function DarkModeToggle() {
                   : "scale-0 opacity-0 rotate-180"
               }`}
             />
-            <SunIcon
+            <MoonIcon
               strokeWidth={1.5}
               className={`h-5 w-5 absolute transition-all duration-500 ease-in-out ${
                 !isDark

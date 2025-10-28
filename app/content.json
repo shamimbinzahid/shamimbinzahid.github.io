@@ -70,11 +70,15 @@
       }
     },
     {
-      "text": "Around the same time, a group of peers formed a software agency where I was asked to design a website, which became my first paid design gig and the start of my design career. I worked with that startup on several client projects for the next two years until my senior year, where I focused my research thesis in HCI with professors of {dndlab} at DU. Our work on usable privacy and security was later published at a conference in 2024.",
+      "text": "Around the same time, a group of peers formed a software agency where I was asked to design a website, which became my first paid design gig and the start of my design career. I worked with that startup on several client projects for the next two years until my senior year, where I focused my research thesis in HCI with professors of {dndlab} at DU. Our work on usable privacy and security was later published at a {conference} in 2024.",
       "links": {
         "dndlab": {
           "label": "DNDLab",
           "href": "https://dndlab.org"
+        },
+        "conference": {
+          "label": "conference",
+          "href": "http://doi.org/10.1007/978-3-031-80020-7_20"
         }
       }
     },

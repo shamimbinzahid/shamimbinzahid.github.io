@@ -1,4 +1,4 @@
-import { Anaheim } from "next/font/google";
+import { Anaheim, Google_Sans_Code } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import DarkModeToggle from "./components/DarkModeToggle";

@@ -2,6 +2,8 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+html.large-text { font-size: 150%; }
+
 
 @keyframes fadeIn {
   from {

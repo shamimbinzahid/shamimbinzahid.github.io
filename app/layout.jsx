@@ -2,6 +2,7 @@ import { Anaheim, Google_Sans_Code } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import DarkModeToggle from "./components/DarkModeToggle";
+import LargeTextToggle from "./components/LargeTextToggle";
 
 const displayFont = Anaheim({
   subsets: ["latin"],
@@ -50,10 +51,12 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${displayFont.variable}`}>
       <head>
         <link rel="icon" href="shamim.ico" type="image/jpeg" sizes="32x32" />
+        <meta name="google-site-verification" content="LBVaADvhEAQ71RT5noFGfqymwq9No4ZYCQNRUMZ-KcA" />
         <GoogleAnalytics />
         <Clarity />
       </head>
       <body className={`${displayFont.className}`}>
+        <LargeTextToggle />
         <DarkModeToggle /> 
         {children}
       </body>

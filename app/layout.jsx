@@ -56,7 +56,7 @@ export default function RootLayout({ children }) {
         <Clarity />
       </head>
       <body className={`${displayFont.className}`}>
-        <LargeTextToggle />
+        {/* <LargeTextToggle /> */}
         <DarkModeToggle /> 
         {children}
       </body>

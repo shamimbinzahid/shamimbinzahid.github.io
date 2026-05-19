@@ -1,6 +1,6 @@
 {
   "name": "Shamim Bin Zahid",
-  "subtitle": "Designer, Engineer, Part-time shit-poster.",
+  "subtitle": "Designer, Engineer, Tinkerer, Part-time shit-poster.",
   "textLinks": [
     {
       "text": "See portfolio",
@@ -44,15 +44,15 @@
   ],
   "paragraphs": [
     {
-      "text": "I build, break, and fix things. Currently, I'm helping recruiters connect with talent faster and better with {airwork}. I’ve worked with startups and growing teams helping them design and build their digital products and online presence for the past five years, which is just long enough to learn that {moveFastBreakFast} usually means someone (often you) has to go and fix it eventually.",
+      "text": "I build, break, and fix things. Currently, I'm helping build scalable, usable and intelligent systems with {ajentica}. I’ve worked with startups and growing teams helping them design and build their digital products and online presence for over five years, which is just long enough to learn that {moveFastBreakFast} usually means someone (often you) has to go and fix it eventually.",
       "links": {
         "moveFastBreakFast": {
           "label": "\"move fast and break things\"",
           "href": "https://en.wikipedia.org/wiki/Move_fast_and_break_things"
         },
-        "airwork": {
-          "label": "Airwork AI",
-          "href": "https://airwork.ai"
+        "ajentica": {
+          "label": "Ajentica",
+          "href": "https://ajentica.ai"
         }
       }
     },

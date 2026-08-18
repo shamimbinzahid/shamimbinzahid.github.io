@@ -4,12 +4,11 @@ import redirects from '../redirects.json';
 /**
  * Generate metadata for each redirect page
  * @param {Object} props - The props object
- * @param {Object} props.params - The params object
- * @param {string} props.params.keyword - The keyword parameter
+ * @param {Promise<{keyword: string}>} props.params - The params object
  * @param {Object} parent - The parent metadata
  */
 export async function generateMetadata({ params }, parent) {
-  const keyword = params.keyword;
+  const { keyword } = await params;
   const redirectUrl = redirects[keyword];
   
   return {
@@ -32,11 +31,10 @@ export function generateStaticParams() {
 /**
  * Redirect page component
  * @param {Object} props - The props object 
- * @param {Object} props.params - The params object
- * @param {string} props.params.keyword - The keyword parameter
+ * @param {Promise<{keyword: string}>} props.params - The params object
  */
-export default function Redirect({ params }) {
-  const { keyword } = params;
+export default async function Redirect({ params }) {
+  const { keyword } = await params;
   const redirectUrl = keyword && redirects[keyword];
   
   return <RedirectClient keyword={keyword} redirectUrl={redirectUrl} />;

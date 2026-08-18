@@ -3,6 +3,7 @@ import "./globals.css";
 import Script from "next/script";
 import DarkModeToggle from "./components/DarkModeToggle";
 import LargeTextToggle from "./components/LargeTextToggle";
+import { PageShell } from "./components/PageShell";
 
 const displayFont = Anaheim({
   subsets: ["latin"],
@@ -58,7 +59,12 @@ export default function RootLayout({ children }) {
       <body className={`${displayFont.className}`}>
         {/* <LargeTextToggle /> */}
         <DarkModeToggle /> 
-        {children}
+        <PageShell
+          outerClassName="bg-amber-100/10"
+          articleClassName="max-w-4xl gap-8 text-font-main text-start p-4"
+        >
+          {children}
+        </PageShell>
       </body>
     </html>
   );

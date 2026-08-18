@@ -113,6 +113,10 @@ html.large-text { font-size: 150%; }
   @apply text-gray-700  dark:text-gray-300;
 }
 
+.text-font-main {
+  @apply font-medium text-sm sm:text-base;
+}
+
 /* Global text link styles */
 .text-color-link {
   @apply underline decoration-gray-600/75  dark:decoration-gray-300/75 hover:text-gray-900  dark:hover:text-white duration-200 font-medium;

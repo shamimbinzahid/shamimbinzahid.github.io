@@ -5,6 +5,7 @@ import { Header } from "./components/Header";
 import { ContentParagraphsHome } from "./components/ContentParagraphs";
 import { Footer } from "./components/Footer";
 import { renderTextWithLinks } from "./components/utils";
+import { TextLinks } from "./components/TextLinks";
 
 export default function Home() {
   return (
@@ -12,6 +13,8 @@ export default function Home() {
       <ProfilePhoto name={content.name} />
 
       <Header name={content.name} subtitle={content.subtitle} />
+      
+      <TextLinks links={content.links} />
 
       <ContentParagraphsHome paragraphs={content.paragraphs} />
 

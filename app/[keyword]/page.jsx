@@ -1,5 +1,8 @@
 import { RedirectClient } from '../components/RedirectClient';
+import { notFound } from 'next/navigation';
 import redirects from '../redirects.json';
+
+export const dynamicParams = false;
 
 /**
  * Generate metadata for each redirect page
@@ -8,7 +11,7 @@ import redirects from '../redirects.json';
  * @param {Object} parent - The parent metadata
  */
 export async function generateMetadata({ params }, parent) {
-  const { keyword } = await params;
+  const { keyword } = (await params) ?? {};
   const redirectUrl = redirects[keyword];
   
   return {
@@ -34,8 +37,12 @@ export function generateStaticParams() {
  * @param {Promise<{keyword: string}>} props.params - The params object
  */
 export default async function Redirect({ params }) {
-  const { keyword } = await params;
+  const { keyword } = (await params) ?? {};
   const redirectUrl = keyword && redirects[keyword];
+
+  if (!keyword || !redirectUrl) {
+    notFound();
+  }
   
   return <RedirectClient keyword={keyword} redirectUrl={redirectUrl} />;
 }

@@ -3,11 +3,11 @@
   "subtitle": "Designer, Engineer, Tinkerer, Part-time shit-poster.",
   "textLinks": [
     {
-      "text": "See portfolio",
+      "label": "See portfolio",
       "href": "https://shamemezahid.github.io"
     },
     {
-      "text": "Email me",
+      "label": "Email me",
       "href": "mailto:shamemezahid@proton.me"
     },
     {

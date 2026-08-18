@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Enable static exports
   images: {
     remotePatterns: [
       {
@@ -10,10 +9,8 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
-    unoptimized: true, // Required for static export
+    unoptimized: true,
   },
-  // Ensure trailing slashes for compatibility with GitHub Pages
-  trailingSlash: true,
 };
 
 export default nextConfig;

@@ -8,7 +8,7 @@ export const TextLinks = ({ links }) => (
           rel="noopener noreferrer"
           className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
         >
-          {link.text}
+          {link.label}
         </a>
         {index < links.length - 1 && (
           <span className="text-gray-700 dark:text-gray-300">•</span>

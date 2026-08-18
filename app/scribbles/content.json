@@ -1,0 +1,374 @@
+{
+  "title": "Scribbles",
+  "subtitle": "Random thoughts, ideas, guides, notes. Written by me",
+  "posts": [
+    {
+      "slug": "but-it-works-on-my-browser-said-the-convict",
+      "title": "“But it works on my browser!” said the convict",
+      "lastEdited": "Mar 20, 2023",
+      "show": true,
+      "content": [
+        {
+          "text": "Have you ever visited a website that works perfectly on Chrome but seems to break on Firefox? Or noticed how Chrome on Windows acts differently from Chrome on a Mac? It can be frustrating when the same web page behaves oddly across different browsers or devices. These quirks happen because each browser has its own way of interpreting HTML, CSS, and JavaScript.",
+          "links": {}
+        },
+        {
+          "text": "Different rendering engines, like Blink for Chrome and Gecko for Firefox, handle things in unique ways, leading to those annoying compatibility issues. In this article, we'll dive into how browsers work, why these inconsistencies occur, and why it's important to ensure that websites run smoothly for everyone, no matter what browser they're using.",
+          "links": {}
+        },
+        {
+          "text": "When we create web applications, we rely on three fundamental technologies: HTML, CSS, and JavaScript. While we have established standards for these technologies—guided by the W3C for HTML and CSS and ECMAScript for JavaScript—issues still arise with browser compatibility. To understand why, we need to delve into how browsers function.",
+          "links": {}
+        },
+        {
+          "text": "### How Browsers Work\n\nWhen you open a web page, your browser undergoes a process called rendering to display the content. This involves several key steps:",
+          "links": {}
+        },
+        {
+          "type": "list",
+          "title": "**The Rendering Process**",
+          "style": "ordered",
+          "items": [
+            "Receiving Files: The browser retrieves HTML, CSS, and JavaScript files that constitute the web page.",
+            "Rendering Engine: The rendering engine interprets these files. Popular rendering engines include Blink for Chromium-based browsers, Gecko for Firefox, and WebKit for Safari.",
+            "Document Object Model (DOM): The rendering engine constructs the DOM, a tree-like structure that represents the elements on the page and their relationships.",
+            "CSS Parsing: The browser parses CSS to create Style Rules that define how each element should be styled.",
+            "Render Tree Creation: The DOM and Style Rules are combined to form the Render Tree, which includes all visible elements and their styles.",
+            "Layout Calculation: The browser calculates the layout, determining the size and position of each element.",
+            "Painting: The rendering engine paints each element on the screen.",
+            "JavaScript Execution: Finally, the browser executes any JavaScript found on the page using its JavaScript engine, such as V8, SpiderMonkey, or JavaScriptCore."
+          ]
+        },
+        {
+          "text": "### Inconsistencies Across Platforms\n\nYou may notice that Chrome behaves differently on Android compared to PC or iOS. This difference arises because Chrome on Android and PC uses the same rendering engine (Blink), ensuring consistent behavior. In contrast, Safari on iOS relies on WebKit and is subject to specific restrictions imposed by Apple on third-party browsers. These restrictions can impact features and performance, leading to inconsistent behavior across platforms.",
+          "links": {}
+        },
+        {
+          "text": "### Vendor Prefixes and Modern Development Practices\n\nTo enhance compatibility across various browsers, developers often utilize vendor prefixes in CSS, such as -moz- for Firefox and -webkit- for WebKit-based browsers. These prefixes allow targeting specific browser implementations for experimental features. However, as web standards evolve, the need for vendor prefixes is diminishing, and developers are encouraged to adopt standardized CSS properties.",
+          "links": {}
+        },
+        {
+          "text": "Tools like Autoprefixer, often used alongside frameworks like Tailwind CSS, automatically generate the necessary vendor prefixes, enabling developers to write modern CSS without worrying about compatibility issues.",
+          "links": {}
+        },
+        {
+          "text": "### Bridging the Digital Divide\n\nWhile it may seem unnecessary to cater to outdated browsers, we must consider that in many regions, including emerging markets, smartphone usage continues to rise. Users may lack access to updated devices or software, highlighting our responsibility to ensure that everyone can access the internet, including those who are less privileged.\n\nBy understanding how browsers work and the importance of compatibility, we can create a more inclusive digital environment for all users.",
+          "links": {}
+        }
+      ]
+    },
+    {
+      "slug": "cpu-architectural-changes-over-time-and-future-possibilities",
+      "title": "CPU Architectural Changes Over Time and Future Possibilities",
+      "lastEdited": "Jul 15, 2022",
+      "show": true,
+      "content": [
+        {
+          "text": "This essay was written as a Microprocessor Course assignment at the University of Dhaka.",
+          "links": {}
+        },
+        {
+          "text": "The history of central processing units (CPUs) is a fascinating journey filled with breakthroughs, innovation, and an evolving landscape of computing power. Over time, the architecture of CPUs has undergone massive transformations to meet the demands of more complex programs, faster computing, and smaller, more efficient chips. This essay covers some key moments in CPU architecture, from the early days of computing to the possibilities of the future.",
+          "links": {}
+        },
+        {
+          "text": "In the 1950s, before modern-day transistors, CPUs were built using large vacuum tubes. These early computers operated without a unified architecture, which made software compatibility almost non-existent. Programs written for one machine could not be run on another, leading to a fragmented computing environment. Vacuum tube processors were inefficient, consumed significant power, and generated excessive heat, making them unreliable and impractical for widespread use.",
+          "links": {}
+        },
+        {
+          "text": "The invention of transistors in the late 1940s marked a significant turning point in CPU architecture. By the 1960s, transistors began to replace vacuum tubes, leading to more reliable, smaller, and faster processors. A major breakthrough occurred with IBM’s System/360 in the mid-1960s, which introduced the concept of an instruction set architecture (ISA). This allowed different machines to run the same software, creating compatibility between systems and fostering a more cohesive computing ecosystem.",
+          "links": {}
+        },
+        {
+          "text": "Transistors enabled manufacturers to create more compact and efficient chips, leading to the miniaturization of computer hardware. The move from vacuum tubes to transistors improved reliability and set the stage for future innovations in semiconductor technology.",
+          "links": {}
+        },
+        {
+          "text": "In 1971, Intel introduced the first commercially available microprocessor, the Intel 4004. It featured a 4-bit data bus and an address size of 14 bits. Though primitive by today’s standards, the 4004 paved the way for modern computing by enabling smaller and more versatile computing devices.",
+          "links": {}
+        },
+        {
+          "text": "By 1974, Intel released the Intel 8080, a pivotal processor that set the industry standard. This 8-bit processor introduced features such as indirect memory addressing and interrupts, allowing for multitasking. These innovations became foundational for the development of modern operating systems.",
+          "links": {}
+        },
+        {
+          "text": "In 1978, Intel launched the 8086, a 16-bit processor that introduced the x86 architecture. This architecture is still in use today and has undergone numerous updates. The 8086 had an address bus width of 20 bits, enabling it to address up to 1MB of memory. It implemented a segmented memory structure, which divided memory into different segments for code, data, and stack, improving multitasking capabilities.",
+          "links": {}
+        },
+        {
+          "text": "The Intel 8086 CPU marked the beginning of the widely-used x86 architecture. This architecture evolved through several iterations, including the 80286 and the 80386. The 80386, also known as i386, was revolutionary in its capability to address 4GB of memory and support advanced features like virtual memory and protected mode. This allowed operating systems to run multiple programs in isolated memory spaces, which was crucial for multitasking and the development of modern operating systems.",
+          "links": {}
+        },
+        {
+          "text": "In the early 2000s, AMD introduced the first 64-bit x86 processor, known as AMD Athlon 64. Intel followed suit with its Intel Xeon 64 processor. The 64-bit x86 architecture, referred to as x86_64 or x64, became the standard for modern computers, enabling them to access more than 4GB of memory—a necessity for today’s demanding applications.",
+          "links": {}
+        },
+        {
+          "text": "Intel’s x86 CPUs have historically followed a CISC architecture. This means the CPUs are designed with a complex instruction set capable of performing many operations with fewer lines of code, reducing memory usage but increasing chip design complexity. CISC architectures are particularly adept at executing high-level programming languages with less overhead. In contrast, RISC processors such as ARM use a simpler instruction set, focusing on executing each instruction within a single clock cycle. While RISC processors may require more instructions to complete tasks, they simplify the CPU design, leading to better efficiency and lower power consumption. This efficiency is crucial in embedded systems, mobile devices, and applications where power availability is limited.",
+          "links": {}
+        },
+        {
+          "text": "ARM processors have seen significant adoption in the mobile market, where power efficiency is critical. They are designed to deliver high performance while consuming minimal power, making them ideal for smartphones and tablets. The ARM architecture is flexible and can be tailored for various applications, from low-power devices to high-performance computing. The big.LITTLE architecture employed by ARM further enhances efficiency by combining high-performance cores with low-power cores on a single chip. This allows devices to handle varying workloads efficiently, switching between cores as needed to optimize power consumption.",
+          "links": {}
+        },
+        {
+          "text": "Another exciting development is RISC-V, an open-source RISC-based instruction set architecture. Unlike ARM, which is proprietary, RISC-V is open for anyone to develop and modify. This open-source nature has garnered significant interest, leading to its adoption in various applications, from embedded devices to supercomputers. RISC-V supports 32, 64, and even 128-bit ISAs, making it adaptable to a wide range of computing needs.",
+          "links": {}
+        },
+        {
+          "text": "The future of CPUs appears to be shifting toward more efficient and specialized designs. As ARM continues to evolve, it may play a larger role in mainstream computing. The recent transition of Apple from Intel x86 processors to its own ARM-based Apple M1 chip is a significant indicator of this trend. The M1, built using a 5nm manufacturing process, demonstrates that RISC-based ARM processors can outperform traditional x86 chips in both performance and energy efficiency. With Windows 11 now being optimized for ARM processors, we may witness an increase in ARM adoption in desktop and server environments. The development of specialized ARM chips for tasks such as AI processing, machine learning, and graphics rendering may further enhance their capabilities in personal computing.",
+          "links": {}
+        },
+        {
+          "text": "As for x86, while it remains dominant in traditional computing environments, it will need to adapt to compete with the growing popularity of ARM and RISC-V. The introduction of hybrid architectures that combine elements of both CISC and RISC could be a potential direction for the future.",
+          "links": {}
+        },
+        {
+          "text": "CPU architecture has come a long way from the early vacuum tube days to the modern era of 64-bit computing. While x86 has been the dominant architecture for decades, RISC-based architectures, particularly ARM and RISC-V, are quickly gaining traction due to their power efficiency and adaptability. As computing needs continue to evolve, future CPUs are likely to focus on specialized processing units, AI acceleration, and more efficient designs. The emergence of ARM and RISC-V suggests a shift in the industry toward architectures that prioritize efficiency, scalability, and adaptability for a wide range of devices—from smartphones to supercomputers.",
+          "links": {}
+        },
+        {
+          "text": "The future is promising, and continued innovation in CPU architecture is expected in the years to come. Reference materials: {cpuProcessingPower}, {historyOfGeneralPurposeCPUs}, and {appleM1Architecture}.",
+          "links": {
+            "cpuProcessingPower": {
+              "label": "Evolution of CPU Processing Power",
+              "href": "https://www.youtube.com/playlist?list=PLC7a8fNahjQ8IkiD5f7blIYrro9oeIfJU"
+            },
+            "historyOfGeneralPurposeCPUs": {
+              "label": "History of General Purpose CPUs",
+              "href": "https://en.wikipedia.org/wiki/History_of_general-purpose_CPUs"
+            },
+            "appleM1Architecture": {
+              "label": "The Apple M1 Isn’t Magic, It’s Good Chip Design",
+              "href": "https://www.engadget.com/apple-m1-architecture-upscaled-141515465.html"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slug": "the-uncomfortable-nature-of-public-benches",
+      "title": "The Uncomfortable Nature of Public Benches",
+      "lastEdited": "Sep 12, 2022",
+      "show": true,
+      "content": [
+        {
+          "text": "Take a brief moment and compare these two scenes,",
+          "links": {}
+        },
+        {
+          "type": "image",
+          "url": "/scribbles/A Bus-stop bench, designed for people to… sit.webp",
+          "alt": "A bus-stop bench with restrictive seating design.",
+          "caption": "Figure 1: A Bus-stop bench, designed for people to... sit."
+        },
+        {
+          "type": "image",
+          "url": "/scribbles/A bunch of pillars left by the side of the road.webp",
+          "alt": "Roadside construction pillars used informally as seating.",
+          "caption": "Figure 2: A bunch of pillars left by the side of the road."
+        },
+        {
+          "text": "At first glance, the design of the bus stop seats might seem frustrating and ironic. In a bustling city like Dhaka, where public transportation is packed to the brim, why are there only two or three narrow seats? Just a few feet away, scattered construction pillars along the roadside comfortably accommodate dozens of people. Some wait for buses, while others simply rest.",
+          "links": {}
+        },
+        {
+          "text": "It turns out, this is not just a Dhaka-specific issue - it is a design approach seen in cities around the world. The limited, uncomfortable seating is no accident. It is a practice known as defensive design, aimed at controlling how public spaces are used.",
+          "links": {}
+        },
+        {
+          "text": "These seats are deliberately designed to prevent people from sitting for long periods, especially to deter homeless individuals from using them for shelter. While it may feel unethical or exclusionary at first glance, this design choice helps regulate public behavior, reducing the chance of misuse or loitering. In this case, the seats are meant for nothing more than giving tired legs a quick rest while waiting for a bus.",
+          "links": {}
+        },
+        {
+          "text": "The irony here is striking. While the intended seating is restrictive, the leftover construction pillars have become an unintended resting spot, offering far more comfort and space than the bus stop seats themselves. Yet, these pillars were not meant to serve as seating in the first place. In fact, the informal use of these structures can be more vexing than the restrictive design of the bus stop.",
+          "links": {}
+        },
+        {
+          "text": "Defensive design, while controversial, is a tool used by urban planners to prevent misuse of public spaces. By making certain areas less inviting for long-term stays, cities attempt to maintain order and reduce the risk of crime or improper use. So, next time you find yourself at a public bench that does not exactly invite you to get too comfortable, remember: it is probably designed that way on purpose.",
+          "links": {}
+        },
+        {
+          "text": "TL;DR: Public seating is not always designed for comfort, but rather for control. Do not expect to get cozy on a bus stop bench anytime soon!",
+          "links": {}
+        }
+      ]
+    },
+    {
+      "slug": "theoretical-stuff-for-good-design",
+      "title": "Theoretical Stuff for Good Design",
+      "lastEdited": "Aug 18, 2026",
+      "show": false,
+      "content": [
+        {
+          "text": "Welcome to the world of design where the true magic lies in creating experiences that seamlessly blend with the user's life. Good design is invisible. As designers, our goal is to create solutions that feel natural and intuitive, making users forget that they are interacting with a designed interface. Join us on this journey as we uncover the principles and techniques behind crafting truly invisible designs.",
+          "links": {}
+        },
+        {
+          "text": "A Gulf is a deep inlet of the sea almost surrounded by land, with a narrow mouth. In real terms, we do not want to get engulfed by confusion or overwhelmed by complexity. In product design, there are two gulfs.",
+          "links": {}
+        },
+        {
+          "type": "list",
+          "title": "**The Gulfs**",
+          "style": "ordered",
+          "items": [
+            "Gulf of Execution: The difference between the intentions of the users and what the system allows them to do or how well the system supports those actions.",
+            "Gulf of Evaluation: The difficulty of assessing the state of the system and how well the artifact supports the discovery and interpretation of that state."
+          ]
+        },
+        {
+          "text": "Our goal is to reduce and clarify all the instances of these gulfs in our product with an action model.",
+          "links": {}
+        },
+        {
+          "type": "list",
+          "title": "**The Action Model**",
+          "style": "ordered",
+          "items": [
+            "Goal: What result do I want to achieve? Be clear on your goals.",
+            "Plan: What options do I have for achieving my goal?",
+            "Specify: Which of these options will I choose?",
+            "Perform: How do I execute my plan?",
+            "Perceive: What happened when I did that?",
+            "Interpret: What does that result mean?",
+            "Compare: Did I reach my goal?"
+          ]
+        },
+        {
+          "text": "**Evaluate your design based on these known heuristics, as listed by Andy Budd.**",
+          "links": {}
+        },
+        {
+          "type": "list",
+          "title": "**Heuristics**",
+          "style": "unordered",
+          "items": [
+            "Design for user expectations: Design the system around the users, their goals, and expectations.",
+            "Clarity: Make the system as clear, concise, and meaningful as possible for the intended audience.",
+            "Minimize unnecessary complexity and cognitive load: Make the system as simple as possible for users to accomplish their tasks, but no simpler.",
+            "Efficiency and task completion: Design for user productivity, not the system. Optimize the system for the most common tasks.",
+            "Provide users with context: Interfaces should provide users with a sense of context in time and space.",
+            "Consistency and standards: Processes and interface elements should be used consistently throughout the system.",
+            "Prevent errors: The system should help prevent errors wherever possible.",
+            "Help users notice and recover from errors: Errors should be obvious and easy to recover from. Error messages should be clear, concise, and easy to notice.",
+            "Promote a pleasurable and positive user experience: The users' interactions with the system should be positive and, where possible, enhance their quality of life."
+          ]
+        },
+        {
+          "text": "Same things, different people, different names.",
+          "links": {}
+        },
+        {
+          "text": "**Jakob Nielsen's 10 heuristic principles:**",
+          "links": {}
+        },
+        {
+          "type": "list",
+          "title": "**Nielsen's Heuristics**",
+          "style": "ordered",
+          "items": [
+            "Visibility of the system status",
+            "Match between system and real world",
+            "User control and freedom",
+            "Error prevention",
+            "Help users recognize, diagnose, and recover from errors",
+            "Consistency and standards",
+            "Recognition rather than recall",
+            "Flexibility and efficiency",
+            "Aesthetic and minimalist",
+            "Help and documentation"
+          ]
+        },
+        {
+          "text": "**Ben Schneiderman's 8 golden rules:**",
+          "links": {}
+        },
+        {
+          "type": "list",
+          "title": "**Schneiderman's Golden Rules**",
+          "style": "ordered",
+          "items": [
+            "Strive for consistency",
+            "Enable frequent users to use shortcuts and seek universal design",
+            "Offer informative feedback",
+            "Design dialogs to yield closure",
+            "Simple error handling",
+            "Easy reversal of actions",
+            "Support internal locus of control",
+            "Reduce short-term memory load"
+          ]
+        },
+        {
+          "text": "A bunch of common-sense theories and principles to go through just once, no need to memorize the names, just understand what they say.",
+          "links": {}
+        },
+        {
+          "text": "**Some behavioral laws:**",
+          "links": {}
+        },
+        {
+          "type": "list",
+          "title": "**Behavioral Laws**",
+          "style": "unordered",
+          "items": [
+            "Miller's Law: The average person can only keep 7 plus or minus 2 items in their working memory.",
+            "Fitts's Law: The time to acquire a target is a function of the distance to and size of the target.",
+            "Hick's Law: The time it takes to make a decision increases with the number and complexity of choices.",
+            "Jakob's Law: Users spend most of their time on other sites; this means that users prefer your site to work the same way as all the other sites they already know.",
+            "Parkinson's Law: Any task will inflate until all of the available time is spent.",
+            "Goal-Gradient Effect: The tendency to approach a goal increases with proximity to the goal.",
+            "Aesthetic-Usability Effect: Users often perceive aesthetically pleasing design as more usable."
+          ]
+        },
+        {
+          "text": "**Some cognitive principles:**",
+          "links": {}
+        },
+        {
+          "type": "list",
+          "title": "**Cognitive Principles**",
+          "style": "unordered",
+          "items": [
+            "Pareto Principle (80/20 Rule): For many events, roughly 80% of the effects come from 20% of the causes.",
+            "Tesler's Law: There is a certain amount of complexity in any system that cannot be reduced.",
+            "Doherty Threshold: Productivity soars when a computer and its users interact at a pace under 400ms that ensures neither must wait on the other.",
+            "Postel's Law: Be liberal in what you accept and conservative in what you send.",
+            "Occam's Razor: Among competing hypotheses that predict equally well, the one with the fewest assumptions should be selected."
+          ]
+        },
+        {
+          "text": "**Some Gestalt principles:**",
+          "links": {}
+        },
+        {
+          "type": "list",
+          "title": "**Gestalt Principles**",
+          "style": "unordered",
+          "items": [
+            "Law of Common Region: Elements tend to be perceived as one group if they share an area with a clearly defined boundary.",
+            "Law of Proximity: Objects that are near or proximate to each other tend to be grouped together.",
+            "Law of Similarity: The human eye tends to perceive similar elements in a design as a complete picture, shape, or group, even if separated.",
+            "Law of Uniformity and Connectedness: Elements that are visually connected are perceived as more related than elements with no connection.",
+            "Law of Prägnanz or Simplicity: People will perceive and interpret ambiguous or complex images as the simplest form possible, because it requires the least cognitive effort."
+          ]
+        },
+        {
+          "text": "**Some cognitive biases:**",
+          "links": {}
+        },
+        {
+          "type": "list",
+          "title": "**Cognitive Biases**",
+          "style": "unordered",
+          "items": [
+            "Peak-End Rule: People judge experiences based on the most intense moment and the final part.",
+            "Serial Position Effect: Users remember the first and last items in a series better than those in the middle.",
+            "Von Restorff Effect: When multiple similar objects are present, the one that differs is most likely to be remembered.",
+            "Zeigarnik Effect: People remember uncompleted or interrupted tasks better than completed tasks."
+          ]
+        }
+      ]
+    }
+  ]
+}

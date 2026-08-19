@@ -14,8 +14,6 @@ export default function Home() {
 
       <Header name={content.name} subtitle={content.subtitle} />
       
-      <TextLinks links={content.links} />
-
       <ContentParagraphsHome paragraphs={content.paragraphs} />
 
       <span className="opacity-0 animate-fade-in delay-0350 text-color-sub">
@@ -38,7 +36,7 @@ export default function Home() {
         )}
       </span>
 
-      <Footer footerNote={content.footerNote} resumeUrl={content.resumeUrl} />
+      <Footer footNote={content.footerNote} resumeUrl={content.resumeUrl} />
     </>
   );
 }

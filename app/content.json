@@ -103,7 +103,7 @@
       "links": {}
     },
     {
-      "text": "Checkout my {portfolio} here, connect with me on {linkedin}, or follow me on {instagram}, where I post once a year, maybe.",
+      "text": "Checkout my {portfolio} here, connect with me on {linkedin}, find me on {github}, or follow me on {instagram}, where I post once a year, maybe.",
       "links": {
         "portfolio": {
           "label": "portfolio",
@@ -112,6 +112,10 @@
         "linkedin": {
           "label": "LinkedIn",
           "href": "https://linkedin.com/in/shamemezahid"
+        },
+        "github": {
+          "label": "GitHub",
+          "href": "https://github.com/shamemezahid"
         },
         "instagram": {
           "label": "Instagram",
@@ -135,7 +139,7 @@
     }
   ],
   "navParagraphHome": {
-      "text": "checkout my {portfolio} here. Connect with me on {linkedin}, or follow me on {instagram}, where I post once a year, maybe. You can find me on most social platforms as {shamemezahid}.",
+      "text": "checkout my {portfolio} here. Connect with me on {linkedin}, find me on {github}, or follow me on {instagram}, where I post once a year, maybe. You can find me on most social platforms as {shamemezahid}.",
       "links": {
         "portfolio": {
           "label": "portfolio",
@@ -144,6 +148,10 @@
         "linkedin": {
           "label": "LinkedIn",
           "href": "https://linkedin.com/in/shamemezahid"
+        },
+        "github": {
+          "label": "GitHub",
+          "href": "https://github.com/shamemezahid"
         },
         "instagram": {
           "label": "Instagram",

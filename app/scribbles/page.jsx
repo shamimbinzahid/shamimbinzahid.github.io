@@ -35,7 +35,7 @@ export default function ScribblesHome() {
                 <h2 className="text-color-link text-color-sub !font-bold !no-underline">
                   {post.title}
                 </h2>
-                <p className="text-color-sub !font-medium opacity-60 line-clamp-2">
+                <p className="text-color-sub opacity-60 line-clamp-2">
                   {contentText}
                 </p>
                 <p className="text-color-sub opacity-80 text-sm">

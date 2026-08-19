@@ -17,7 +17,7 @@ export default function About() {
 
       <BackButton />
 
-      <Footer footerNote={content.footerNote} resumeUrl={content.resumeUrl} />
+      <Footer footNote={content.footerNote} resumeUrl={content.resumeUrl} />
 
     </>
   );

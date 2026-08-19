@@ -114,12 +114,12 @@ html.large-text { font-size: 150%; }
 }
 
 .text-font-main {
-  @apply font-medium text-sm sm:text-base;
+  @apply font-normal text-sm sm:text-base;
 }
 
 /* Global text link styles */
 .text-color-link {
-  @apply underline decoration-gray-600/75  dark:decoration-gray-300/75 hover:text-gray-900  dark:hover:text-white duration-200 font-medium;
+  @apply font-normal underline decoration-gray-600/75  dark:decoration-gray-300/75 hover:text-gray-900  dark:hover:text-white duration-200 ;
 }
 
 /* Slowly rotating gradient background overlay (simple, reusable) */

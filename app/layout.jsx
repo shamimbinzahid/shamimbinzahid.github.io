@@ -1,11 +1,11 @@
-import { Anaheim, Google_Sans_Code } from "next/font/google";
+import { Anaheim, Google_Sans_Code, Recursive } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import DarkModeToggle from "./components/DarkModeToggle";
-import LargeTextToggle from "./components/LargeTextToggle";
+import GotoTopFAB from "./components/GotoTopFAB";
 import { PageShell } from "./components/PageShell";
 
-const displayFont = Anaheim({
+const displayFont = Recursive({
   subsets: ["latin"],
   variable: "--font-display",
 });
@@ -57,8 +57,8 @@ export default function RootLayout({ children }) {
         <Clarity />
       </head>
       <body className={`${displayFont.className}`}>
-        {/* <LargeTextToggle /> */}
         <DarkModeToggle /> 
+        <GotoTopFAB />
         <PageShell
           outerClassName="bg-amber-100/10"
           articleClassName="max-w-4xl gap-8 text-font-main text-start p-4"
